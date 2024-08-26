@@ -9,26 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class FirstSeleniumTests {
-    // Создаем драйвер
-    WebDriver driver;
-
-    @BeforeEach// - эта аннотация указание, что метод будет выполняться перед каждым нашим тестовым методом
-//    @BeforeAll // - эта аннотация указание, что метод будет выполняться перед всеми нашими тестовым методом
-    void startDriver() {
-        //Инициализируем драйвер Хром Драйвером
-        driver = new ChromeDriver();
-//        Задаем не явное ожидание загрузки элементов
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//        Задаем параметр окна браузера "развернуть на весь экран"
-        driver.manage().window().maximize();
-    }
-
-    @AfterEach // эта аннотация указание, что метод будет выполняться после каждого теста
-    void closeDriver() {
-        //закрываем драйвер
-        driver.quit();
-    }
+public class FirstSeleniumTests extends BaseTest{
 
     @Test
     void test1() {

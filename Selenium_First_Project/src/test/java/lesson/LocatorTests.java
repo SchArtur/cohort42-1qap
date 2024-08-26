@@ -9,22 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class LocatorTests {
-
-    WebDriver driver;
-
-    @BeforeEach
-    void startDriver() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().window().maximize();
-        driver.get("https://telranedu.web.app/login");
-    }
-
-    @AfterEach
-    void closeDriver() {
-        driver.quit();
-    }
+public class LocatorTests extends BaseTest{
 
     @Test
     @Tag("@1234")
