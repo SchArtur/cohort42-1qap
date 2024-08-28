@@ -16,16 +16,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ChromeTest {
-
-    // Создаем драйвер
-   protected WebDriver driver;
-    // Создаём явные ожидания
-   protected WebDriverWait wait;
+    WebDriver driver;
+    WebDriverWait wait;
 
 
     @BeforeEach
-// - эта аннотация указание, что метод будет выполняться перед каждым нашим тестовым методом
-//    @BeforeAll // - эта аннотация указание, что метод будет выполняться перед всеми нашими тестовым методом
     void startDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-search-engine-choice-screen");
@@ -44,7 +39,7 @@ public class ChromeTest {
     @Test
     void test2() {
         driver.navigate().to("https://demowebshop.tricentis.com/");
-        waitInSeconds(10);
+        waitInSeconds(5);
     }
 
     protected void waitInSeconds(int seconds) {
