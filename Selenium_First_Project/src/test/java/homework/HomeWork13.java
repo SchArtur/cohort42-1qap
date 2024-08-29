@@ -10,7 +10,6 @@ public class HomeWork13 extends BaseHomeWork{
     @Test
     @DisplayName("Проверка успешной авторизации пользователя")
     void test1(){
-
         fillInputField(By.cssSelector("[name='Email']"),"larysa@gmail.com");
         fillInputField(By.cssSelector("[name='Password']"),"qwerty");
         clickOnElement(By.cssSelector("[value='Log in']"));
