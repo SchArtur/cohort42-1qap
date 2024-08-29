@@ -1,18 +1,15 @@
 package lesson;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.time.Duration;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-public class LocatorTests extends BaseTest{
+public class LocatorTests extends BaseTest {
 
     @BeforeEach
     void preconditions() {
@@ -24,37 +21,56 @@ public class LocatorTests extends BaseTest{
     @Tag("@PHONEBOOK")
     @DisplayName("Поиск элементов на странице Phonebook")
     void test1234() {
-//        <h1>PHONEBOOK</h1>
+        // Поиск элемента <h1> на странице и проверка его текста
         WebElement tagElementH1 = driver.findElement(By.tagName("h1"));
-        assertEquals("PHONEBOOK",tagElementH1.getText(), "Заголовок страницы не PHONEBOOK" );
+        // Проверяем, что текст заголовка равен "PHONEBOOK"
+        Assertions.assertEquals("PHONEBOOK", tagElementH1.getText(),
+                "Заголовок страницы не PHONEBOOK");
 
+        // Поиск всех элементов <a> на странице и проверка, что их список не пуст
         List<WebElement> listAElements = driver.findElements(By.tagName("a"));
-        Assertions.assertTrue(!listAElements.isEmpty(), "Список элементов пуст");
+        // Проверяем, что найдено хотя бы один элемент <a>
+        Assertions.assertTrue(!listAElements.isEmpty(),
+                "Список элементов пуст");
 
-//        <a href="/login" style="">LOGIN</a>
-//        особенность данного метода, и почему его почти не используют, он ищет текст, только когда есть атрибуты в тэге
+        // Поиск элемента по полному тексту ссылки
         WebElement linkTextElement = driver.findElement(By.linkText("LOGIN"));
-//        Надо быть внимательнее с аттрибутом href, может возвращать полную ссылку
-        assertEquals("/login", linkTextElement.getDomAttribute("href"),"Аттрибут элемента не соответствует ожидаемому");
+        // Проверяем, что значение атрибута href соответствует ожидаемому
+        Assertions.assertEquals("/login", linkTextElement.getDomAttribute("href"),
+                "Аттрибут элемента не соответствует ожидаемому");
 
+        // Поиск элемента по частичному тексту ссылки
         WebElement partialLinkTextElement = driver.findElement(By.partialLinkText("LOG"));
-        assertEquals("LOGIN", partialLinkTextElement.getText(), "Текст элемента не соответствует ожидаемому");
+        // Проверяем, что текст элемента совпадает с ожидаемым
+        Assertions.assertEquals("LOGIN", partialLinkTextElement.getText(),
+                "Текст элемента не соответствует ожидаемому");
 
-//        <button type="submit" name="login">Login</button>
+        // Поиск элемента по атрибуту name
         WebElement elementByName = driver.findElement(By.name("login"));
-        assertEquals("submit", elementByName.getAttribute("type"),"Аттрибут элемента не соответствует ожидаемому");
+        // Проверяем, что значение атрибута type соответствует ожидаемому
+        Assertions.assertEquals("submit", elementByName.getAttribute("type"),
+                "Аттрибут элемента не соответствует ожидаемому");
 
+        // Поиск элемента по имени класса
         WebElement classNameElement = driver.findElement(By.className("container"));
-        Assertions.assertTrue(classNameElement.isDisplayed(), "Элемент по имени класса отсутствует");
+        // Проверяем, что элемент с указанным классом отображается на странице
+        Assertions.assertTrue(classNameElement.isDisplayed(),
+                "Элемент по имени класса отсутствует");
 
+        // Поиск элемента по ID
         WebElement elementById = driver.findElement(By.id("root"));
-        Assertions.assertTrue(elementById.isDisplayed(), "Элемент по id отсутствует");
+        // Проверяем, что элемент с указанным ID отображается на странице
+        Assertions.assertTrue(elementById.isDisplayed(),
+                "Элемент по id отсутствует");
     }
 
     @Test
     void test2() {
+        // Поиск элемента <form> на странице
         WebElement parentElement = driver.findElement(By.tagName("form"));
+        // Поиск элемента с именем "login" внутри найденного <form>
         WebElement loginButton = parentElement.findElement(By.name("login"));
+        // Проверяем, что кнопка "login" отображается
         Assertions.assertTrue(loginButton.isDisplayed(), "Элемент loginButton отсутствует");
     }
 }

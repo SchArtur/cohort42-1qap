@@ -7,47 +7,45 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.crypto.Mac;
 import java.time.Duration;
 
-public class FirstSeleniumTests extends BaseTest{
+public class FirstSeleniumTests extends BaseTest {
 
     @Test
     void test1() {
-        //открываем страницу
+        // Открываем страницу Bing
         driver.get("https://www.bing.com/");
-        //нажимаем кнопку назад
+        // Переходим на предыдущую страницу в истории навигации
         driver.navigate().back();
-        //нажимаем кнопку вперед
+        // Переходим на следующую страницу в истории навигации
         driver.navigate().forward();
-        //обновляем страницу
+        // Обновляем текущую страницу
         driver.navigate().refresh();
 
-        //проверяем, что открылась страница с Title = Bing
+        // Проверяем, что заголовок текущей страницы равен "Bing"
         Assertions.assertEquals("Bing", driver.getTitle(), "Открыта страница с другим Title");
     }
 
     @Test
     void test2() {
+        // Открываем страницу Google
         driver.navigate().to("https://www.google.com/");
+        // Переходим на предыдущую страницу в истории навигации
         driver.navigate().back();
+        // Переходим на следующую страницу в истории навигации
         driver.navigate().forward();
+        // Обновляем текущую страницу
         driver.navigate().refresh();
 
+        // Проверяем, что заголовок текущей страницы равен "Google"
         Assertions.assertEquals("Google", driver.getTitle(), "Открыта страница с другим Title");
     }
 }
 
-// Горячие клавиши
-//    win
-//    ctrl+alt+l = выравнивание
-//    ctrl+alt+o = удаление лишних импортов
-//    ctrl+d = дублирование строки
-//    ctrl+/ = комментирование строки
-//    ctrl+shift+ u = изменение регистра переменной (ПРИМЕР пример)
-
-//    mac
-//    cmd+opt+l
-//    ctrl+opt+o
-//    cmd + d
-//    cmd + /
-//    cmd + shift+u
+//Эти горячие клавиши помогут вам эффективно работать с кодом Mac:
+//        •	Cmd+Opt+L: Выравнивание кода.
+//        •	Ctrl+Opt+O: Удаление неиспользуемых импортов.
+//	      •	Cmd+D: Дублирование строки.
+//        •	Cmd+/: Комментирование и раскомментирование строк.
+//        •	Cmd+Shift+U: Изменение регистра переменной.
