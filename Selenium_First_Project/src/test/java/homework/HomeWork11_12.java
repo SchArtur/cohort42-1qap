@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class HomeWork11 {
+public class HomeWork11_12 {
     WebDriver driver;
 
     @BeforeEach
