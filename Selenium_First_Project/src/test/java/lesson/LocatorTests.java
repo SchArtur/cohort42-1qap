@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class LocatorTests extends BaseTest{
 
     @Test
@@ -18,7 +21,7 @@ public class LocatorTests extends BaseTest{
     void test1234() {
 //        <h1>PHONEBOOK</h1>
         WebElement tagElementH1 = driver.findElement(By.tagName("h1"));
-        Assertions.assertEquals("PHONEBOOK",tagElementH1.getText(), "Заголовок страницы не PHONEBOOK" );
+        assertEquals("PHONEBOOK",tagElementH1.getText(), "Заголовок страницы не PHONEBOOK" );
 
         List<WebElement> listAElements = driver.findElements(By.tagName("a"));
         Assertions.assertTrue(!listAElements.isEmpty(), "Список элементов пуст");
@@ -27,14 +30,14 @@ public class LocatorTests extends BaseTest{
 //        особенность данного метода, и почему его почти не используют, он ищет текст, только когда есть атрибуты в тэге
         WebElement linkTextElement = driver.findElement(By.linkText("LOGIN"));
 //        Надо быть внимательнее с аттрибутом href, может возвращать полную ссылку
-        Assertions.assertEquals("/login", linkTextElement.getDomAttribute("href"),"Аттрибут элемента не соответствует ожидаемому");
+        assertEquals("/login", linkTextElement.getDomAttribute("href"),"Аттрибут элемента не соответствует ожидаемому");
 
         WebElement partialLinkTextElement = driver.findElement(By.partialLinkText("LOG"));
-        Assertions.assertEquals("LOGIN", partialLinkTextElement.getText(), "Текст элемента не соответствует ожидаемому");
+        assertEquals("LOGIN", partialLinkTextElement.getText(), "Текст элемента не соответствует ожидаемому");
 
 //        <button type="submit" name="login">Login</button>
         WebElement elementByName = driver.findElement(By.name("login"));
-        Assertions.assertEquals("submit", elementByName.getAttribute("type"),"Аттрибут элемента не соответствует ожидаемому");
+        assertEquals("submit", elementByName.getAttribute("type"),"Аттрибут элемента не соответствует ожидаемому");
 
         WebElement classNameElement = driver.findElement(By.className("container"));
         Assertions.assertTrue(classNameElement.isDisplayed(), "Элемент по имени класса отсутствует");
@@ -48,6 +51,5 @@ public class LocatorTests extends BaseTest{
         WebElement parentElement = driver.findElement(By.tagName("form"));
         WebElement loginButton = parentElement.findElement(By.name("login"));
         Assertions.assertTrue(loginButton.isDisplayed(), "Элемент loginButton отсутствует");
-
     }
 }
