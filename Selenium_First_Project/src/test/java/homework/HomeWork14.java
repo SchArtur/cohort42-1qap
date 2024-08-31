@@ -18,5 +18,6 @@ public class HomeWork14 extends BaseHomeWork {
         fillInputField(By.xpath("//*[name='ConfirmPassword']"), "qwerty");
         clickOnElement(By.xpath("//*[name='register-button']"));
         checkElementOnDisplay(By.xpath("//*[class='button-1 register-continue-button']"));
+        checkElementOnDisplay(By.xpath("//*[text()='Log out']"));
     }
 }
