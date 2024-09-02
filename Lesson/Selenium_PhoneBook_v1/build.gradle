@@ -20,6 +20,10 @@ dependencies {
     // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5
     testImplementation 'io.qameta.allure:allure-junit5:2.29.0'
 
+    //Что бы не смущало уведомление по slf4j
+    implementation 'org.slf4j:slf4j-nop:2.0.7'
+
+
 }
 
 test {

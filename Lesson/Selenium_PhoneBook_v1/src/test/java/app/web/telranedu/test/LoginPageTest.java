@@ -27,7 +27,7 @@ public class LoginPageTest extends BaseTest {
     @Tag("@SMOKE")
     @Tag("@4")
     @DisplayName("Проверка регистрации с валидными данными")
-    void test4() {
+    void test1() {
         clickOnElement(By.cssSelector("[href='/login']"));
         fillInputField(By.xpath("//*[@name='email']"), NEW_USER.getEmail());
         fillInputField(By.xpath("//*[@name='password']"), NEW_USER.getPassword());
