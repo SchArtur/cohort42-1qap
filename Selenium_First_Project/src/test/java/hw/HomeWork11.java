@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class HomeWork1 {
+public class HomeWork11 {
     ChromeDriver driver;
 
     @BeforeEach
@@ -29,7 +29,6 @@ public class HomeWork1 {
         driver.navigate().back();
         driver.navigate().forward();
         driver.navigate().refresh();
-        driver.navigate().to("https://google.com/");
 
 
         Assertions.assertEquals("Demo Web Shop", driver.getTitle(), "Open page with another title");
