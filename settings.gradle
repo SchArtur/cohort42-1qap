@@ -1,7 +1,13 @@
 rootProject.name = 'cohort42-1qap'
+<<<<<<< HEAD
 include 'Lesson'
 include 'Lesson:Selenium_First_Project'
 include 'Lesson:Selenium_PhoneBook_v1'
 include 'Lesson:Selenium_PhoneBook_VOM_v2'
 include 'HomeWork'
+=======
+include 'Selenium_First_Project'
+include 'Selenium_PhoneBook_v1'
+include 'DemoWebShop_v1'
+>>>>>>> 0f1f771 (Create a separate DemoWebShop module in the project to automate the page.)
 
