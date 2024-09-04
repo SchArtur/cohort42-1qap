@@ -14,6 +14,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class LocatorTests extends BaseTest{
 
+    @BeforeEach
+    void preconditions() {
+        driver.get("https://telranedu.web.app/login");
+    }
+
     @Test
     @Tag("@1234")
     @Tag("@PHONEBOOK")

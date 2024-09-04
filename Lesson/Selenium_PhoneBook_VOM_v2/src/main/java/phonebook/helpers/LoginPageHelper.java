@@ -47,6 +47,11 @@ public class LoginPageHelper extends BaseHelper {
         return elementIsDisplayed(By.xpath("//*[text()='Sign Out']"));
     }
 
+    @Step("Проверяем наличие кнопки 'LOGIN'")
+    public boolean isLoginLinkPresent() {
+        return elementIsDisplayed(By.cssSelector("[href='/login']"));
+    }
+
     @Step("Получаем сообщение об ошибке")
     public String getErrorMessage() {
         return getElement(By.xpath("//*[contains(text(),'401')]")).getText();

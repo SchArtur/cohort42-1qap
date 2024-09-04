@@ -1,10 +1,16 @@
 package lesson;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 public class XpathTests extends BaseTest {
+
+    @BeforeEach
+    void preconditions() {
+        driver.get("https://telranedu.web.app/login");
+    }
 
     /*
     1) * - выбрать любой элемент (имеется ввиду тэг)

@@ -23,7 +23,6 @@ dependencies {
     //Что бы не смущало уведомление по slf4j
     implementation 'org.slf4j:slf4j-nop:2.0.7'
 
-
 }
 
 test {

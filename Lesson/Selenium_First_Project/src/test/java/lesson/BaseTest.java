@@ -37,8 +37,8 @@ public class BaseTest {
 //        Задаём не явное ожидание полной загрузки страницы
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 //        Задаем параметр окна браузера "развернуть на весь экран"
-        driver.manage().window().maximize();
-        driver.get("https://telranedu.web.app");
+//        driver.manage().window().maximize();
+//        driver.get("https://telranedu.web.app");
     }
 
     @AfterEach
@@ -86,5 +86,12 @@ public class BaseTest {
         Assertions.assertTrue(driver.findElements(locator).size() > 0, String.format("Элемент с локатором - %s не найден", locator));
     }
 
+    protected void waitInSeconds(int seconds) {
+        try {
+            Thread.sleep(Duration.ofSeconds(seconds).toMillis());
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }

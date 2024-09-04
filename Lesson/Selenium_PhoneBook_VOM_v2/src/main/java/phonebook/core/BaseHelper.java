@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import phonebook.data.Contact;
 
 import java.security.SecureRandom;
 import java.time.Duration;
@@ -25,6 +26,7 @@ public class BaseHelper {
     public WebElement getElement(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
     public List<WebElement> getElements(By locator) {
         return driver.findElements(locator);
     }
@@ -39,12 +41,12 @@ public class BaseHelper {
 
     @Step("Получаем текст всплывающего уведомления")
     public String getAlertText() {
-        String alertText= getAlert().getText();
+        String alertText = getAlert().getText();
         getAlert().accept();
         return alertText;
     }
 
-    @Step("Заполняем поле {0}, значением {1}")
+    @Step("Заполняем поле {locator}, значением {value}")
     public void fillInputField(By locator, String value) {
         WebElement element = waitForClickableElement(locator);
         element.click();
@@ -62,17 +64,26 @@ public class BaseHelper {
         return getElements(locator).size() > 0;
     }
 
-    @Step("Генерируем рандомный email")
+    @Step("Генерируем случайный email")
     public static String getRandomEmail() {
-        char[] chars = "0123456789abcdefgh".toCharArray();
+        return getName() + "@test.de";
+    }
+
+    @Step("Генерируем случайное имя")
+    public static String getName() {
+        char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         Random random = new SecureRandom();
-        char[] result = new char[8];
+        char[] result = new char[6];
         for (int i = 0; i < result.length; i++) {
             int randomIndex = random.nextInt(chars.length);
             result[i] = chars[randomIndex];
         }
-        String email = new String(result) + "@test.com";
-        return email;
+        return new String(result);
+    }
+
+    @Step("Генерируем новый contact")
+    public static Contact getNewContact() {
+        return new Contact(getName(), "Testov", "1234567890", getRandomEmail(), "address", "discr");
     }
 
     @Step("Ожидаем {0} секунд")

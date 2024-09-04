@@ -1,12 +1,18 @@
 package lesson;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class CssSelectorTests extends BaseTest {
+
+    @BeforeEach
+    void preconditions() {
+        driver.get("https://telranedu.web.app/login");
+    }
 
     @Test
     @DisplayName("Проверка поиска элемента по css")

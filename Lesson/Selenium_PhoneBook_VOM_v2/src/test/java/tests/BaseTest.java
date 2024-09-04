@@ -7,7 +7,8 @@ import phonebook.core.AppManager;
 
 public class BaseTest {
 
-    AppManager app = new AppManager();
+    //System.getProperty("browser", "chrome") - второе значение это по умолчанию если не передан параметр.
+    AppManager app = new AppManager(System.getProperty("browser", "chrome"));
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeSuite

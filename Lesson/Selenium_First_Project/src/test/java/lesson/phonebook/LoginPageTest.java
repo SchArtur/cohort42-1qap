@@ -19,7 +19,7 @@ public class LoginPageTest extends BaseTest {
     @Tag("@SMOKE")
     @DisplayName("Проверка авторизации с валидными данными")
     void test1() {
-        clickOnElement(By.cssSelector("href='/login'"));
+        clickOnElement(By.cssSelector("[href='/login']"));
         fillInputField(By.xpath("//*[@name='email']") , "manuel@gm.com");
         fillInputField(By.xpath("//*[@name='password']") , "Manuel1234$");
         clickOnElement(By.xpath("//*[text()='Login']"));
