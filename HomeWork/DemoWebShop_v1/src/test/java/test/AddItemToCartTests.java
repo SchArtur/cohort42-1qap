@@ -26,9 +26,11 @@ public class AddItemToCartTests extends BaseTest {
         System.out.println("Количество товаров до добавления: " + countItems);
 
 
-        clickOnElement(By.cssSelector("[href='/141-inch-laptop'],[src='https://demowebshop.tricentis.com/content/images/thumbs/0000224_141-inch-laptop_32.png']"));
-        clickOnElement(By.cssSelector("[id='add-to-cart-button-31']"));
-        clickOnElement(By.cssSelector("[href='/cart']"));
+//        clickOnElement(By.cssSelector("[href='/141-inch-laptop'],[src='https://demowebshop.tricentis.com/content/images/thumbs/0000224_141-inch-laptop_32.png']"));
+//        clickOnElement(By.cssSelector("[id='add-to-cart-button-31']"));
+//        clickOnElement(By.cssSelector("[href='/cart']"));
+
+        List<WebElement>productItems=driver.findElements(By.className("product-item"));
 
 
         String countItemsAfterElement = driver.findElement(By.cssSelector("[class='cart-qty']")).getText();
