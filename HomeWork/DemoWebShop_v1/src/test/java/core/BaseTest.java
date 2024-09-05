@@ -101,11 +101,6 @@ public class BaseTest {
             throw new RuntimeException(e);
         }
     }
-
-    int getCountCart(String countStr) {
-        return Integer.parseInt(countStr.replace("(", "").replace(")", ""));
-    }
-
     protected void loginTestUser() {
         fillInputField(By.cssSelector("[name='Email']"), TEST_REGISTRATION.getEmail());
         fillInputField(By.cssSelector("[name='Password']"), TEST_REGISTRATION.getPassword());
