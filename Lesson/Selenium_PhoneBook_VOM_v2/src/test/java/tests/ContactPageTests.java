@@ -29,12 +29,11 @@ public class ContactPageTests extends BaseTest{
         contactPageHelper.removeContact(TEST_CONTACT);
     }
 
-    @Test(description = "Проверка добавления контакта с валидными данными, вариант 1")
+    @Test(description = "Проверка добавления контакта с валидными данными, вариант 2")
     void test7() {
-        contactPageHelper
-                .clickOnAddLink()
-                .fillAddContactFields(TEST_CONTACT)
-                .clickOnSaveButton();
+        contactPageHelper.clickOnAddLink();
+        contactPageHelper.fillAddContactFields(TEST_CONTACT);
+        contactPageHelper.clickOnSaveButton();
 
         Assert.assertTrue(contactPageHelper.contactIsPresent(TEST_CONTACT));
         contactPageHelper.removeContact(TEST_CONTACT);

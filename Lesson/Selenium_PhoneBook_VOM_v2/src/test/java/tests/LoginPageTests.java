@@ -17,7 +17,7 @@ public class LoginPageTests extends BaseTest {
     }
 
     @Test(description = "Проверка успешной авторизации", groups = {"Positive"})
-    void test3() {
+    void test3Sm() {
         loginPageHelper.clickOnLoginLink();
         loginPageHelper.fillLoginForm(TEST_USER);
         loginPageHelper.clickOnLoginButton();
@@ -36,7 +36,7 @@ public class LoginPageTests extends BaseTest {
     }
 
     @Test(description = "Проверка успешной регистрации", groups = {"Positive"})
-    void test5() {
+    void test5Sm() {
         loginPageHelper.clickOnLoginLink();
         loginPageHelper.fillLoginForm(NEW_USER);
         loginPageHelper.clickOnRegistrationButton();
