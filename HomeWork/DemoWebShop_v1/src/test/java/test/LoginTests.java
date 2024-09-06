@@ -17,6 +17,5 @@ public class LoginTests extends BaseTest {
         fillInputField(By.cssSelector("[name='Password']"), TEST_REGISTRATION.getPassword());
         clickOnElement(By.cssSelector("[value='Log in']"));
         Assertions.assertTrue(elementIsDisplayed(By.cssSelector("[href='/logout']")));
-
     }
 }

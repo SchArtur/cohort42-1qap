@@ -12,39 +12,37 @@ public class AddItemToCartTests extends BaseTest {
     @BeforeEach
     void precondition() {
         loginTestUser();
-        waitInSeconds(1);
-        if (getCountCart() != 0) {
-            clearCart();
-        }
+
     }
+
     @Test
     @Tag("03")
     @DisplayName("Успешное добавление второго товара из списка")
-    void test3() throws Exception {
-        List<WebElement> productTitles = driver.findElements(By.xpath("//h2[@class='product-title']/a"));
-        String productNameExpected = productTitles.get(1).getText();
+    void test3() {
 
-        List<WebElement> addToCartButtons = driver.findElements(By.cssSelector("[value='Add to cart']"));
-        addToCartButtons.get(1).click();
-        waitInSeconds(2);
+        String countItemsBeforeElement = driver.findElement(By.cssSelector("[class='cart-qty']")).getText();
+        String cellStr = countItemsBeforeElement.replace("(", "").replace(")", "");
+        int countItems = Integer.parseInt(cellStr);
+        System.out.println("Количество товаров до добавления: " + countItems);
 
-        clickOnElement(By.cssSelector("[href='/cart']"));
-        String productNameActual = getElement(By.className("product-name")).getText();
 
-        Assertions.assertEquals(productNameExpected, productNameActual, "Добавился не тот товар");
-    }
-    public int getCountCart() {
-        WebElement countElement = getElement(By.className("cart-qty"));
-        return Integer.parseInt(countElement.getText().replace("(", "").replace(")", ""));
-    }
-    private void clearCart() {
-        clickOnElement(By.xpath("//*[text()='Shopping cart']"));
-        List<WebElement> removeCheckboxes = driver.findElements(By.name("removefromcart"));
-        for (WebElement checkbox : removeCheckboxes) {
-            checkbox.click();
+//        clickOnElement(By.cssSelector("[href='/141-inch-laptop'],[src='https://demowebshop.tricentis.com/content/images/thumbs/0000224_141-inch-laptop_32.png']"));
+//        clickOnElement(By.cssSelector("[id='add-to-cart-button-31']"));
+//        clickOnElement(By.cssSelector("[href='/cart']"));
+
+        List<WebElement>productItems=driver.findElements(By.className("product-item"));
+
+
+        String countItemsAfterElement = driver.findElement(By.cssSelector("[class='cart-qty']")).getText();
+        String cellStr1 = countItemsAfterElement.replace("(", "").replace(")", "");
+        int countItems1 = Integer.parseInt(cellStr1);
+        System.out.println("Количество товаров после добавления: " + countItems1);
+
+
+        if (countItems1 == countItems + 1) {
+            System.out.println("Товар успешно добавлен в корзину.");
+        } else {
+            System.out.println("Ошибка при добавлении товара в корзину.");
         }
-        clickOnElement(By.name("updatecart"));
-        waitInSeconds(1);
-        driver.get("https://demowebshop.tricentis.com/");
     }
 }

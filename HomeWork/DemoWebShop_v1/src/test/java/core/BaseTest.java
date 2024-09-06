@@ -24,10 +24,9 @@ import java.util.Random;
 public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
-    public static final Registration TEST_REGISTRATION = new Registration("larysa@gmail.com", "qwerty");
-    public static final Registration NEW_REGISTRATION = new Registration(getRandomEmail(), "qwerty");
-    public static final User TEST_USER = new User("Larysa", "Petrova");
-
+    protected static final Registration TEST_REGISTRATION = new Registration("larysa@gmail.com", "qwerty");
+    protected final Registration NEW_REGISTRATION = new Registration(getRandomEmail(), "qwerty");
+    protected static final User TEST_USER = new User("Larysa", "Petrova");
 
     @BeforeEach
     public void startDriver() {
@@ -102,6 +101,11 @@ public class BaseTest {
             throw new RuntimeException(e);
         }
     }
+
+    int getCountCart(String countStr) {
+        return Integer.parseInt(countStr.replace("(", "").replace(")", ""));
+    }
+
     protected void loginTestUser() {
         fillInputField(By.cssSelector("[name='Email']"), TEST_REGISTRATION.getEmail());
         fillInputField(By.cssSelector("[name='Password']"), TEST_REGISTRATION.getPassword());

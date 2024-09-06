@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,9 +13,9 @@ import java.time.Duration;
 public class BaseTest {
 
     // Создаем драйвер
-    protected WebDriver driver;
+   protected WebDriver driver;
     // Создаём явные ожидания
-    protected WebDriverWait wait;
+   protected WebDriverWait wait;
 
 
     @BeforeEach
@@ -24,9 +23,7 @@ public class BaseTest {
 //    @BeforeAll // - эта аннотация указание, что метод будет выполняться перед всеми нашими тестовым методом
     void startDriver() {
         //Инициализируем драйвер Хром Драйвером
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-search-engine-choice-screen");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         // инициализируем явные ожидания
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 //        Задаем не явное ожидание загрузки элементов
@@ -80,8 +77,6 @@ public class BaseTest {
 
     //проверяем наличие элемента по локатору на странице
     public void checkElementOnDisplay(By locator) {
-        Assertions.assertTrue(driver.findElements(locator).size() > 0, String.format("Элемент с локатором - %s не найден", locator));
+        Assertions.assertTrue(driver.findElements(locator).size() > 0,  String.format("Элемент с локатором - %s не найден", locator ));
     }
-
-
 }
