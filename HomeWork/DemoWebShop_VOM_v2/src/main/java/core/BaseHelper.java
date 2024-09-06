@@ -13,6 +13,8 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
+import static core.AppManager.URL;
+
 public class BaseHelper {
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -43,6 +45,11 @@ public class BaseHelper {
         String alertText = getAlert().getText();
         getAlert().accept();
         return alertText;
+    }
+
+    @Step("Переходим на главную страницу")
+    public void goToHomePage() {
+       driver.get(URL);
     }
 
     @Step("Заполняем поле {locator}, значением {value}")
