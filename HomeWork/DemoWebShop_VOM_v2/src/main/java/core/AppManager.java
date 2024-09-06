@@ -23,6 +23,7 @@ public class AppManager {
     public static LoginHelper loginHelper;
     public static CreateAccountHelper createAccountHelper;
     public static AddItemToCartHelper addItemToCartHelper;
+    public static final String URL= "https://demowebshop.tricentis.com/";
     public void init() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-search-engine-choice-screen");
@@ -31,7 +32,7 @@ public class AppManager {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
         driver.manage().window().maximize();
-        driver.get("https://demowebshop.tricentis.com/login");
+        driver.get(URL);
 
         loginHelper=new LoginHelper();
         createAccountHelper=new CreateAccountHelper();
