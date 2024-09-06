@@ -7,16 +7,16 @@ import static core.AppManager.*;
 public class AddItemToCartTests extends BaseTest {
     @BeforeMethod
     void precondition() {
-        if (loginHelper.isLogOutPresent()) {
-            loginHelper.clickLogOutButton();
+        if (!loginHelper.isLogOutPresent()) {
+            loginHelper.loginTestUser();
         }
     }
     @Test(description = "Успешное добавление второго товара из списка")
     void test3() {
         addItemToCartHelper.removeAllItemsFromCart();
+        addItemToCartHelper.goToHomePage();
         addItemToCartHelper.addSecondItemToCart();
-        addItemToCartHelper.goToCart();
-        Assert.assertNotEquals(addItemToCartHelper.getCountCart(), "0", "Ожидалось, что корзина будет содержать товар.");
+        Assert.assertEquals(addItemToCartHelper.getCountCart(), "1", "Ожидалось, что корзина будет содержать товар.");
     }
 
     @Test(description = "Проверка очистки корзины")
@@ -28,9 +28,9 @@ public class AddItemToCartTests extends BaseTest {
 
     @Test(description = "Проверка наличия товара в корзине")
     void test5() {
-        addItemToCartHelper.clickAddToCartButton("product-name");
+        addItemToCartHelper.clickAddToCartButton("14.1-inch Laptop");
         addItemToCartHelper.goToCart();
-        Assert.assertEquals(addItemToCartHelper.getProductNameInCart(), "product-name", "Ожидалось, что в корзине будет товар с указанным названием.");
+        Assert.assertEquals(addItemToCartHelper.getProductNameInCart(), "14.1-inch Laptop", "Ожидалось, что в корзине будет товар с указанным названием.");
     }
 }
 
