@@ -30,6 +30,10 @@ test {
         if (project.hasProperty('tags')) {
             includeTags("${tags}")
         }
+
+        if (project.hasProperty('browser')) {
+            systemProperty('browser', "${browser}")
+        }
     }
     testLogging {
         events("passed", "skipped", "failed")
