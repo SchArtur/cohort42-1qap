@@ -1,0 +1,11 @@
+19:03:08.727 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
+19:03:08.896 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
+
+19:03:08.903 [main] INFO  BaseTest -- ============ Start test =============
+19:03:08.906 [main] INFO  core.AppManager -- Выбран браузер - chrome
+19:03:18.980 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
+19:03:20.145 [main] INFO  BaseTest -- Test is started: test1
+19:03:26.428 [main] INFO  BaseTest -- Test 'Проверка успешной регистрации' - PASSED
+19:03:26.428 [main] INFO  BaseTest -- ===========================
+19:03:26.433 [main] INFO  BaseTest -- ============= Stop test ===============
