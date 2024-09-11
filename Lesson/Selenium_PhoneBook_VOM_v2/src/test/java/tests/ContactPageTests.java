@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
+import phonebook.core.DataProviders;
+import phonebook.data.Contact;
 
 import static phonebook.core.AppManager.*;
 
@@ -37,5 +39,16 @@ public class ContactPageTests extends BaseTest{
 
         Assert.assertTrue(contactPageHelper.contactIsPresent(TEST_CONTACT));
         contactPageHelper.removeContact(TEST_CONTACT);
+    }
+
+    @Test(description = "Проверка добавления контакта с не валидными данными", groups = {"Negative"}, dataProvider = "getContactsFromCsvFile", dataProviderClass = DataProviders.class)
+    void test8(Contact contact, String alert) {
+        contactPageHelper.clickOnAddLink();
+        contactPageHelper.fillAddContactFields(contact);
+        contactPageHelper.clickOnSaveButton();
+        if (alert.equals("alert")) {
+            contactPageHelper.getAlert().accept();
+        }
+        Assert.assertTrue(!contactPageHelper.getCurrentUrl().equals("https://telranedu.web.app/contacts"));
     }
 }

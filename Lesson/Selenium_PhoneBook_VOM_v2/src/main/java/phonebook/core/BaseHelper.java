@@ -1,14 +1,18 @@
 package phonebook.core;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import phonebook.data.Contact;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.security.SecureRandom;
 import java.time.Duration;
 import java.util.List;
@@ -37,6 +41,10 @@ public class BaseHelper {
 
     public Alert getAlert() {
         return wait.until(ExpectedConditions.alertIsPresent());
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
 
     @Step("Получаем текст всплывающего уведомления")
@@ -94,5 +102,26 @@ public class BaseHelper {
             throw new RuntimeException(e);
         }
     }
+
+    //Делаем скриншот в Аллюр отчёт
+    @Attachment(value = "Screenshot", type = "image/png")
+    public static byte[] takeScreenshot() {
+        return ((TakesScreenshot) AppManager.driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+//    @Step("Делаем скриншот")
+//    public static String takeScreenshotPath(){
+//        File tmp = ((TakesScreenshot) AppManager.driver).getScreenshotAs(OutputType.FILE);
+//        File screenshot = new File(String.format("screenshots/screen%s.png", System.currentTimeMillis()));
+//        try {
+//            Files.copy(tmp.toPath(), screenshot.toPath());
+//            Allure.addAttachment("Screenshot", new FileInputStream(screenshot));
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        return screenshot.getAbsolutePath();
+//    }
 
 }

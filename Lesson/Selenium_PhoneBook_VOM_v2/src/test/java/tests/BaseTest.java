@@ -9,6 +9,8 @@ import phonebook.core.AppManager;
 
 import java.lang.reflect.Method;
 
+import static phonebook.core.BaseHelper.takeScreenshot;
+
 public class BaseTest {
 
     //System.getProperty("browser", "chrome") - второе значение это по умолчанию если не передан параметр.
@@ -41,6 +43,8 @@ public class BaseTest {
             LOG.info("Test '{}' - '{}' - PASSED", result.getMethod().getMethodName(), result.getMethod().getDescription());
         } else {
             LOG.info("Test '{}' - '{}' - FAILED", result.getMethod().getMethodName(), result.getMethod().getDescription());
+            takeScreenshot();
+//            takeScreenshotPath();
         }
         LOG.info("======================================================");
     }

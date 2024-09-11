@@ -3,6 +3,8 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import phonebook.core.DataProviders;
+import phonebook.data.User;
 
 import static phonebook.core.AppManager.*;
 
@@ -42,4 +44,15 @@ public class LoginPageTests extends BaseTest {
         loginPageHelper.clickOnRegistrationButton();
         Assert.assertTrue(loginPageHelper.isSignOutPresent(), "Не отображается кнопка 'Sign Out'");
     }
+
+
+    @Test(description = "Проверка регистрации с не валидными данными", groups = {"Negative"}, dataProvider = "getUsers", dataProviderClass = DataProviders.class)
+    void test6(User user) {
+        loginPageHelper.clickOnLoginLink();
+        loginPageHelper.fillLoginForm(user);
+        loginPageHelper.clickOnRegistrationButton();
+        Assert.assertTrue(loginPageHelper.getAlertText().contains("Wrong email or password format"), "Текст всплывающего уведомления не содержит нужную строку");
+        Assert.assertTrue(!loginPageHelper.isSignOutPresent(), "Отображается кнопка 'Sign Out'!");
+    }
 }
+
