@@ -11,15 +11,28 @@ public class AddItemToCartHelper extends BaseHelper {
 
     @Step("Получаем количество товаров в корзине")
     public String getCountCart() {
-       return getElement(By.className("cart-qty")).getText().replace("(", "").replace(")", "");
+        return getElement(By.className("cart-qty")).getText().replace("(", "").replace(")", "");
     }
 
     @Step("Очищаем корзину")
     public AddItemToCartHelper clearCart() {
         clickOnElement(By.xpath("//*[text()='Shopping cart']"));
         List<WebElement> removeCheckboxes = getElements(By.name("removefromcart"));
-        clickOnElement(By.name("updatecart"));
-        waitInSeconds(2);
+        if (removeCheckboxes.isEmpty()) {
+            System.out.println("Корзина уже пуста, нечего очищать.");
+            return this;
+        }
+        for (WebElement checkbox : removeCheckboxes) {
+            if (!checkbox.isSelected()) {
+                checkbox.click();
+            }
+        }
+        WebElement updateCartButton = getElement(By.name("updatecart"));
+        if (updateCartButton.isDisplayed()) {
+            clickOnElement(By.name("updatecart"));
+        } else {
+            System.out.println("Кнопка обновления корзины не видна.");
+        }
         return this;
     }
 
