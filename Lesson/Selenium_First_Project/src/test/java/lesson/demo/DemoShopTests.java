@@ -33,7 +33,7 @@ public class DemoShopTests extends BaseTest {
     }
 
     @Test
-    void test2() throws Exception {
+    void test2() {
         List<WebElement> productTitles = driver.findElements(By.xpath("//h2[@class='product-title']/a"));
         String productNameExpected = productTitles.get(1).getText();
         //*[@class='product-item']/descendant::input
@@ -48,6 +48,7 @@ public class DemoShopTests extends BaseTest {
         Assertions.assertEquals(productNameExpected, productNameActual, "Добавился не тот товар");
     }
 
+    //метод очищает корзину
     private void clearCart() {
         clickOnElement(By.xpath("//*[text()='Shopping cart']"));
         List<WebElement> removeCheckboxes = driver.findElements(By.name("removefromcart"));

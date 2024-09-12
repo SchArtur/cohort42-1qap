@@ -15,6 +15,7 @@ public class ContactsPageTest extends BaseTest {
 
     @Test
     @Tag("@4")
+    @Tag("@SMOKE")
     @DisplayName("Успешное добавление контакта")
     void test4() {
             waitInSeconds(1);

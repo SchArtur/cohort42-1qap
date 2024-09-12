@@ -11,6 +11,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,14 +27,21 @@ public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected static final User TEST_USER = new User("manuel@gm.com", "Manuel1234$");
-    protected static final Contact TEST_CONTACT = new Contact("TestUnuTest","Testov","1234567890", getRandomEmail(), "address","discr");
+    protected static final Contact TEST_CONTACT = new Contact("TestUnuTest", "Testov", "1234567890", getRandomEmail(), "address", "discr");
     protected static final User NEW_USER = new User(getRandomEmail(), "Qweeee123!");
+    private final String BROWSER = System.getProperty("browser", "chrome");
 
     @BeforeEach
     void startDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-search-engine-choice-screen");
-        driver = new ChromeDriver(options);
+        switch (BROWSER) {
+            case "chrome" -> driver = new ChromeDriver(options);
+            case "safari" -> driver = new SafariDriver();
+            case "firefox" -> driver = new FirefoxDriver();
+            case "edge" -> driver = new EdgeDriver();
+            default -> driver = new ChromeDriver(options);
+        }
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
@@ -47,6 +57,7 @@ public class BaseTest {
     public WebElement getElement(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
     public List<WebElement> getElements(By locator) {
         return driver.findElements(locator);
     }
