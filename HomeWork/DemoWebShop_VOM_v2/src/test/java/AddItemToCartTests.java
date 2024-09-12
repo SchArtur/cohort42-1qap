@@ -2,8 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static core.AppManager.addItemToCartHelper;
-import static core.AppManager.loginHelper;
+import static core.AppManager.*;
 
 public class AddItemToCartTests extends BaseTest {
     @BeforeMethod
@@ -11,20 +10,22 @@ public class AddItemToCartTests extends BaseTest {
         if (!loginHelper.isLogOutPresent()) {
             loginHelper.loginTestUser();
         }
-        addItemToCartHelper.removeAllItemsFromCart();
         addItemToCartHelper.goToHomePage();
     }
+
     @Test(description = "Успешное добавление второго товара из списка")
     void test3() {
+        addItemToCartHelper.removeAllItemsFromCart();
+        addItemToCartHelper.goToHomePage();
         addItemToCartHelper.addSecondItemToCart();
-        Assert.assertEquals(addItemToCartHelper.getCountCart(), "1", "Ожидалось, что корзина будет содержать товар.");
+        Assert.assertEquals(addItemToCartHelper.getCountCart(), 1, "Ожидалось, что корзина будет содержать товар.");
     }
 
     @Test(description = "Проверка очистки корзины")
     void test4() {
         addItemToCartHelper.addSecondItemToCart();
         addItemToCartHelper.clearCart();
-        Assert.assertEquals(addItemToCartHelper.getCountCart(), "0", "Ожидалось, что корзина будет пустой.");
+        Assert.assertEquals(addItemToCartHelper.getCountCart(), 0, "Ожидалось, что корзина будет пустой.");
     }
 
     @Test(description = "Проверка наличия товара в корзине")
@@ -33,8 +34,6 @@ public class AddItemToCartTests extends BaseTest {
         addItemToCartHelper.goToCart();
         Assert.assertEquals(addItemToCartHelper.getProductNameInCart(), "14.1-inch Laptop", "Ожидалось, что в корзине будет товар с указанным названием.");
     }
-    }
-
-
+}
 
 
