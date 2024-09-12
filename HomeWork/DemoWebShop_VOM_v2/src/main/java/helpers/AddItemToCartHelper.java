@@ -10,38 +10,32 @@ import java.util.List;
 public class AddItemToCartHelper extends BaseHelper {
 
     @Step("Получаем количество товаров в корзине")
-    public String getCountCart() {
-        return getElement(By.className("cart-qty")).getText().replace("(", "").replace(")", "");
+    public Integer getCountCart() {
+        return Integer.parseInt(getElement(By.className("cart-qty")).getText().replace("(", "").replace(")", ""));
     }
 
     @Step("Очищаем корзину")
     public AddItemToCartHelper clearCart() {
-        clickOnElement(By.xpath("//*[text()='Shopping cart']"));
-        List<WebElement> removeCheckboxes = getElements(By.name("removefromcart"));
-        if (removeCheckboxes.isEmpty()) {
-            System.out.println("Корзина уже пуста, нечего очищать.");
+        if (getCountCart() == 0) {
             return this;
         }
-        for (WebElement checkbox : removeCheckboxes) {
-            if (!checkbox.isSelected()) {
-                checkbox.click();
-            }
+        clickOnElement(By.xpath("//*[text()='Shopping cart']"));
+        List<WebElement> removeCheckboxes = getElements(By.name("removefromcart"));
+        for (WebElement removeCheckbox : removeCheckboxes) {
+            removeCheckbox.click();
         }
-        WebElement updateCartButton = getElement(By.name("updatecart"));
-        if (updateCartButton.isDisplayed()) {
-            clickOnElement(By.name("updatecart"));
-        } else {
-            System.out.println("Кнопка обновления корзины не видна.");
-        }
+        clickOnElement(By.name("updatecart"));
+        waitInSeconds(2);
         return this;
     }
 
     @Step("Добавляем второй товар из списка в корзину")
     public AddItemToCartHelper addSecondItemToCart() {
-        List<WebElement> productTitles = getElements(By.xpath("//h2[@class='product-title']/a"));
+//        List<WebElement> productTitles = getElements(By.xpath("//h2[@class='product-title']/a"));
 
         List<WebElement> addToCartButtons = getElements(By.cssSelector("[value='Add to cart']"));
-        waitInSeconds(2);
+        addToCartButtons.get(1).click();
+        waitInSeconds(3);
         return this;
     }
 

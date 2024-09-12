@@ -1,7 +1,10 @@
 package core;
 
 import io.qameta.allure.Step;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,11 +25,7 @@ public class BaseHelper {
     }
 
     public WebElement getElement(By locator) {
-        try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        } catch (TimeoutException e) {
-            throw new RuntimeException("Не удалось найти элемент по локатору: " + locator.toString(), e);
-        }
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public List<WebElement> getElements(By locator) {
@@ -36,7 +35,6 @@ public class BaseHelper {
     public WebElement waitForClickableElement(By locator) {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-
 
     public Alert getAlert() {
         return wait.until(ExpectedConditions.alertIsPresent());
@@ -51,7 +49,7 @@ public class BaseHelper {
 
     @Step("Переходим на главную страницу")
     public void goToHomePage() {
-        driver.get(URL);
+       driver.get(URL);
     }
 
     @Step("Заполняем поле {locator}, значением {value}")
@@ -98,4 +96,3 @@ public class BaseHelper {
         }
     }
 }
-

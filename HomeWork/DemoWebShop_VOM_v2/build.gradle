@@ -19,9 +19,6 @@ dependencies {
     // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5
     implementation 'io.qameta.allure:allure-testng:2.29.0'
 
-    //Что бы не смущало уведомление по slf4j
-//    implementation 'org.slf4j:slf4j-nop:2.0.7'
-
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     implementation 'ch.qos.logback:logback-classic:1.5.7'
 
@@ -29,6 +26,10 @@ dependencies {
 
 test {
     useTestNG()
+    if (project.hasProperty('browser')) {
+        systemProperty('browser', "${browser}")
+    }
+    finalizedBy('allureReport')
 }
 
 //tasks.register('qa', Test){
