@@ -3,5 +3,6 @@ include 'Lesson'
 include 'Lesson:Selenium_First_Project'
 include 'Lesson:Selenium_PhoneBook_v1'
 include 'Lesson:Selenium_PhoneBook_VOM_v2'
+include 'Lesson:Selenium_PhoneBook_POM_v2'
 include 'HomeWork'
 
