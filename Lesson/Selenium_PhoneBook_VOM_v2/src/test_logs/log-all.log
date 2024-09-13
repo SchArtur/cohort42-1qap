@@ -306,3 +306,159 @@
 23:10:06.243 INFO  tests.BaseTest -- ======================================================
 23:10:06.248 INFO  tests.BaseTest -- ******************* Тесты завершены *******************
 23:10:06.248 INFO  tests.BaseTest -- ======================================================
+20:13:08.874 INFO  org.testng.internal.Utils -- [TestNG] Running:
+  /Users/Artur/Library/Caches/JetBrains/IdeaIC2024.1/temp-testng-customsuite.xml
+
+20:13:08.883 INFO  tests.BaseTest -- ======================================================
+20:13:08.883 INFO  tests.BaseTest -- ******************* Запуск тестов *******************
+20:13:08.886 INFO  phonebook.core.AppManager -- Выбран браузер - chrome
+20:13:11.588 INFO  phonebook.core.AppManager -- Открываем страницу - https://telranedu.web.app
+20:13:11.590 INFO  phonebook.utils.Listener -- Переход по адресу - https://telranedu.web.app
+20:13:12.079 INFO  tests.BaseTest -- Test is started: test9
+20:13:12.124 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (6cdca29c27ec77421dd71a6d9c195ed2)] -> css selector: [href='/login']]}] по локатору - By.cssSelector: [href='/login']
+20:13:15.798 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (6cdca29c27ec77421dd71a6d9c195ed2)] -> css selector: [class='contact-item_card__2SOIM']]}] по локатору - By.cssSelector: [class='contact-item_card__2SOIM']
+20:13:21.982 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.cssSelector: [class='contact-item_card__2SOIM']
+20:13:27.002 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.xpath: //*[text()='refmxr']
+20:13:37.709 INFO  tests.BaseTest -- Test 'test9' - 'Проверка удаления контакта' - FAILED
+20:13:38.102 INFO  tests.BaseTest -- ======================================================
+20:13:38.107 INFO  tests.BaseTest -- ******************* Тесты завершены *******************
+20:13:38.107 INFO  tests.BaseTest -- ======================================================
+20:16:36.883 INFO  org.testng.internal.Utils -- [TestNG] Running:
+  /Users/Artur/Library/Caches/JetBrains/IdeaIC2024.1/temp-testng-customsuite.xml
+
+20:16:36.893 INFO  tests.BaseTest -- ======================================================
+20:16:36.893 INFO  tests.BaseTest -- ******************* Запуск тестов *******************
+20:16:36.896 INFO  phonebook.core.AppManager -- Выбран браузер - chrome
+20:16:38.671 INFO  phonebook.utils.Listener -- Переход по адресу - https://telranedu.web.app
+20:16:39.225 INFO  tests.BaseTest -- Test is started: test9
+20:16:39.270 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (246d5c5fc4f3e224b0095ce4f5a53672)] -> css selector: [href='/login']]}] по локатору - By.cssSelector: [href='/login']
+20:16:43.042 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (246d5c5fc4f3e224b0095ce4f5a53672)] -> css selector: [class='contact-item_card__2SOIM']]}] по локатору - By.cssSelector: [class='contact-item_card__2SOIM']
+20:16:49.155 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.cssSelector: [class='contact-item_card__2SOIM']
+20:16:54.169 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.xpath: //*[text()='zqypul']
+20:16:54.181 INFO  tests.BaseTest -- Test 'test9' - 'Проверка удаления контакта' - PASSED
+20:16:54.181 INFO  tests.BaseTest -- ======================================================
+20:16:54.186 INFO  tests.BaseTest -- ******************* Тесты завершены *******************
+20:16:54.186 INFO  tests.BaseTest -- ======================================================
+20:22:43.136 INFO  org.testng.internal.Utils -- [TestNG] Running:
+  /Users/Artur/Library/Caches/JetBrains/IdeaIC2024.1/temp-testng-customsuite.xml
+
+20:22:43.148 INFO  tests.BaseTest -- ======================================================
+20:22:43.148 INFO  tests.BaseTest -- ******************* Запуск тестов *******************
+20:22:43.151 INFO  phonebook.core.AppManager -- Выбран браузер - chrome
+20:22:44.600 INFO  phonebook.utils.Listener -- Переход по адресу - https://telranedu.web.app
+20:22:45.256 INFO  tests.BaseTest -- Test is started: test7
+20:22:45.299 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [href='/login']]}] по локатору - By.cssSelector: [href='/login']
+20:22:45.299 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/login']
+20:22:45.313 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [href='/login']]
+20:22:45.350 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[@name='email']
+20:22:45.369 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[@name='email']]
+20:22:45.479 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[@name='email']] значением - [testg@mail.com]
+20:22:45.480 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[@name='password']
+20:22:45.491 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[@name='password']]
+20:22:45.529 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[@name='password']] значением - [Manuel1234$]
+20:22:45.529 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Login']
+20:22:45.540 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[text()='Login']]
+20:22:45.558 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/contacts']
+20:22:46.505 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [href='/contacts']]
+20:22:46.556 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/add']
+20:22:46.570 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [href='/add']]
+20:22:46.591 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Name']
+20:22:46.603 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Name']]
+20:22:46.654 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Name']] значением - [jgoinx]
+20:22:46.655 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Last Name']
+20:22:46.664 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Last Name']]
+20:22:46.704 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Last Name']] значением - [Testov]
+20:22:46.704 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Phone']
+20:22:46.714 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Phone']]
+20:22:46.752 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Phone']] значением - [1234567890]
+20:22:46.752 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='email']
+20:22:46.761 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='email']]
+20:22:46.797 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='email']] значением - [ttrouu@test.de]
+20:22:46.797 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Address']
+20:22:46.807 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Address']]
+20:22:46.848 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='Address']] значением - [address]
+20:22:46.848 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='description']
+20:22:46.857 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='description']]
+20:22:46.893 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> css selector: [placeholder='description']] значением - [discr]
+20:22:46.893 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Save']
+20:22:46.901 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[text()='Save']]
+20:22:47.564 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (977bdc755f9fe9025be38a3599b6ff45)] -> xpath: //*[text()='jgoinx']]}] по локатору - By.xpath: //*[text()='jgoinx']
+20:22:47.574 INFO  tests.BaseTest -- Test 'test7' - 'Проверка добавления контакта с валидными данными, вариант 2' - PASSED
+20:22:47.574 INFO  tests.BaseTest -- ======================================================
+20:22:47.579 INFO  tests.BaseTest -- ******************* Тесты завершены *******************
+20:22:47.579 INFO  tests.BaseTest -- ======================================================
+20:31:51.165 INFO  org.testng.internal.Utils -- [TestNG] Running:
+  /Users/Artur/Library/Caches/JetBrains/IdeaIC2024.1/temp-testng-customsuite.xml
+
+20:31:51.175 INFO  tests.BaseTest -- ======================================================
+20:31:51.175 INFO  tests.BaseTest -- ******************* Запуск тестов *******************
+20:31:51.178 INFO  phonebook.core.AppManager -- Выбран браузер - chrome
+20:31:52.762 INFO  phonebook.utils.Listener -- Переход по адресу - https://telranedu.web.app
+20:31:53.351 INFO  tests.BaseTest -- Test is started: test10
+20:31:53.394 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [href='/login']]}] по локатору - By.cssSelector: [href='/login']
+20:31:53.394 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/login']
+20:31:53.408 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [href='/login']]
+20:31:53.445 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[@name='email']
+20:31:53.466 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[@name='email']]
+20:31:53.569 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[@name='email']] значением - [testg@mail.com]
+20:31:53.570 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[@name='password']
+20:31:53.581 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[@name='password']]
+20:31:53.622 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[@name='password']] значением - [Manuel1234$]
+20:31:53.622 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Login']
+20:31:53.634 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='Login']]
+20:31:53.653 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/contacts']
+20:31:54.544 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [href='/contacts']]
+20:31:54.598 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/contacts']
+20:31:54.609 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [href='/contacts']]
+20:31:54.630 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/add']
+20:31:54.641 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [href='/add']]
+20:31:54.661 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Name']
+20:31:54.674 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Name']]
+20:31:54.719 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Name']] значением - [fgtfid]
+20:31:54.719 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Last Name']
+20:31:54.729 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Last Name']]
+20:31:54.767 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Last Name']] значением - [Testov]
+20:31:54.768 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Phone']
+20:31:54.777 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Phone']]
+20:31:54.818 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Phone']] значением - [1234567890]
+20:31:54.818 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='email']
+20:31:54.828 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='email']]
+20:31:54.868 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='email']] значением - [esphcw@test.de]
+20:31:54.868 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Address']
+20:31:54.879 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Address']]
+20:31:54.918 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Address']] значением - [address]
+20:31:54.919 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Save']
+20:31:54.927 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='Save']]
+20:31:56.942 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='fgtfid']
+20:31:56.962 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='fgtfid']]
+20:31:56.990 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Edit']
+20:31:57.003 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='Edit']]
+20:31:57.022 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Name']
+20:31:57.031 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Name']]
+20:31:57.086 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Name']] значением - [hhpewn]
+20:31:57.086 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Last Name']
+20:31:57.093 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Last Name']]
+20:31:57.143 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Last Name']] значением - [Testov]
+20:31:57.143 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Phone']
+20:31:57.154 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Phone']]
+20:31:57.206 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Phone']] значением - [1234567890]
+20:31:57.206 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='email']
+20:31:57.214 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='email']]
+20:31:57.267 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='email']] значением - [nuusfq@test.de]
+20:31:57.267 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [placeholder='Address']
+20:31:57.274 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Address']]
+20:31:57.324 INFO  phonebook.utils.Listener -- Заполнено поле [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [placeholder='Address']] значением - [address]
+20:31:57.324 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Save']
+20:31:57.335 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='Save']]
+20:31:59.378 INFO  phonebook.utils.Listener -- Найдены элементы [Decorated {[[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='hhpewn']]}, Decorated {[[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='hhpewn']]}] по локатору - By.xpath: //*[text()='hhpewn']
+20:32:04.397 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.xpath: //*[text()='fgtfid']
+20:32:04.398 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.cssSelector: [href='/contacts']
+20:32:04.410 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> css selector: [href='/contacts']]
+20:32:04.433 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='hhpewn']
+20:32:04.448 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='hhpewn']]
+20:32:04.470 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Remove']
+20:32:04.481 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (fd9f1504b5dc0b050adddfa439daf176)] -> xpath: //*[text()='Remove']]
+20:32:05.516 INFO  tests.BaseTest -- Test 'test10' - 'Проверка редактирования  контакта' - PASSED
+20:32:05.518 INFO  tests.BaseTest -- ======================================================
+20:32:05.528 INFO  tests.BaseTest -- ******************* Тесты завершены *******************
+20:32:05.529 INFO  tests.BaseTest -- ======================================================

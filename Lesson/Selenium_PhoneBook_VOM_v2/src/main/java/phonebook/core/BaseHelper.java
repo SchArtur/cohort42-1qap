@@ -28,7 +28,8 @@ public class BaseHelper {
     }
 
     public WebElement getElement(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return driver.findElement(locator);
     }
 
     public List<WebElement> getElements(By locator) {
@@ -36,7 +37,8 @@ public class BaseHelper {
     }
 
     public WebElement waitForClickableElement(By locator) {
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+//        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+        return  driver.findElement(locator);
     }
 
     public Alert getAlert() {
@@ -95,7 +97,7 @@ public class BaseHelper {
     }
 
     @Step("Ожидаем {0} секунд")
-    protected void waitInSeconds(int seconds) {
+    public void waitInSeconds(int seconds) {
         try {
             Thread.sleep(Duration.ofSeconds(seconds).toMillis());
         } catch (InterruptedException e) {
