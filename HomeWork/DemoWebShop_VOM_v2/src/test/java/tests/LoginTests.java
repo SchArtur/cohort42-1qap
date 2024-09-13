@@ -1,3 +1,5 @@
+package tests;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,10 +16,10 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(description = "Проверка успешной регистрации", groups = {"Positive"})
-    void test1() {
+    void test1Sm() {
         loginHelper.clickOnLoginLink();
         loginHelper.fillLoginForm(TEST_REGISTRATION);
         loginHelper.clickLoginButton();
-        Assert.assertTrue(loginHelper.isLogOutPresent(),"Не отображается кнопка 'Log Out'");
+        Assert.assertTrue(loginHelper.isLogOutPresent(), "Не отображается кнопка 'Log Out'");
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smoke">
+    <test name="smoke">
+        <classes>
+            <class name="tests.AddItemToCartTests"/>
+            <class name="tests.CreateAccountTests"/>
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name=".*Sm.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

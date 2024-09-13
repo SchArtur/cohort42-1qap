@@ -2,119 +2,145 @@
 19:03:08.896 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:03:08.903 [main] INFO  BaseTest -- ============ Start test =============
+19:03:08.903 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:03:08.906 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:03:18.980 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:03:20.145 [main] INFO  BaseTest -- Test is started: test1
-19:03:26.428 [main] INFO  BaseTest -- Test 'Проверка успешной регистрации' - PASSED
-19:03:26.428 [main] INFO  BaseTest -- ===========================
-19:03:26.433 [main] INFO  BaseTest -- ============= Stop test ===============
+19:03:20.145 [main] INFO  tests.BaseTest -- Test is started: test1
+19:03:26.428 [main] INFO  tests.BaseTest -- Test 'Проверка успешной регистрации' - PASSED
+19:03:26.428 [main] INFO  tests.BaseTest -- ===========================
+19:03:26.433 [main] INFO  tests.BaseTest -- ============= Stop test ===============
 19:22:47.602 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not start step: no test case running
 19:22:47.604 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not start step: no test case running
 19:22:47.604 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not update step: no step running
 19:22:47.605 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not stop step: no step running
 19:22:47.605 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not update step: no step running
 19:22:47.605 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not stop step: no step running
-19:22:47.673 [Test worker] INFO  BaseTest -- ============ Start test =============
+19:22:47.673 [Test worker] INFO  tests.BaseTest -- ============ Start test =============
 19:22:47.683 [Test worker] INFO  core.AppManager -- Выбран браузер - firefox
 19:22:51.565 [Test worker] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:22:52.463 [Test worker] INFO  BaseTest -- Test is started: test3
-19:23:25.873 [Test worker] INFO  BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
-19:23:25.873 [Test worker] INFO  BaseTest -- ===========================
-19:23:25.877 [Test worker] INFO  BaseTest -- Test is started: test4
-19:24:04.858 [Test worker] INFO  BaseTest -- Test 'Проверка очистки корзины' - FAILED
-19:24:04.859 [Test worker] INFO  BaseTest -- ===========================
-19:24:04.862 [Test worker] INFO  BaseTest -- Test is started: test5
-19:24:26.475 [Test worker] INFO  BaseTest -- Test 'Проверка наличия товара в корзине' - FAILED
-19:24:26.476 [Test worker] INFO  BaseTest -- ===========================
-19:24:26.480 [Test worker] INFO  BaseTest -- Test is started: test2
-19:24:29.992 [Test worker] INFO  BaseTest -- Test 'Проверка успешной регистрации' - PASSED
-19:24:29.993 [Test worker] INFO  BaseTest -- ===========================
-19:24:29.996 [Test worker] INFO  BaseTest -- Test is started: test1
-19:24:36.282 [Test worker] INFO  BaseTest -- Test 'Проверка успешной регистрации' - PASSED
-19:24:36.282 [Test worker] INFO  BaseTest -- ===========================
-19:24:36.295 [Test worker] INFO  BaseTest -- ============= Stop test ===============
+19:22:52.463 [Test worker] INFO  tests.BaseTest -- Test is started: test3
+19:23:25.873 [Test worker] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
+19:23:25.873 [Test worker] INFO  tests.BaseTest -- ===========================
+19:23:25.877 [Test worker] INFO  tests.BaseTest -- Test is started: test4
+19:24:04.858 [Test worker] INFO  tests.BaseTest -- Test 'Проверка очистки корзины' - FAILED
+19:24:04.859 [Test worker] INFO  tests.BaseTest -- ===========================
+19:24:04.862 [Test worker] INFO  tests.BaseTest -- Test is started: test5
+19:24:26.475 [Test worker] INFO  tests.BaseTest -- Test 'Проверка наличия товара в корзине' - FAILED
+19:24:26.476 [Test worker] INFO  tests.BaseTest -- ===========================
+19:24:26.480 [Test worker] INFO  tests.BaseTest -- Test is started: test2
+19:24:29.992 [Test worker] INFO  tests.BaseTest -- Test 'Проверка успешной регистрации' - PASSED
+19:24:29.993 [Test worker] INFO  tests.BaseTest -- ===========================
+19:24:29.996 [Test worker] INFO  tests.BaseTest -- Test is started: test1
+19:24:36.282 [Test worker] INFO  tests.BaseTest -- Test 'Проверка успешной регистрации' - PASSED
+19:24:36.282 [Test worker] INFO  tests.BaseTest -- ===========================
+19:24:36.295 [Test worker] INFO  tests.BaseTest -- ============= Stop test ===============
 19:28:12.841 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
 19:28:13.017 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:28:13.025 [main] INFO  BaseTest -- ============ Start test =============
+19:28:13.025 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:28:13.027 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:28:15.082 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:28:15.961 [main] INFO  BaseTest -- Test is started: test3
-19:28:24.609 [main] INFO  BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
-19:28:24.610 [main] INFO  BaseTest -- ===========================
-19:28:24.612 [main] INFO  BaseTest -- Test is started: test4
-19:28:26.984 [main] INFO  BaseTest -- Test 'Проверка очистки корзины' - FAILED
-19:28:26.984 [main] INFO  BaseTest -- ===========================
-19:28:26.986 [main] INFO  BaseTest -- Test is started: test5
-19:28:30.111 [main] INFO  BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
-19:28:30.111 [main] INFO  BaseTest -- ===========================
-19:28:30.115 [main] INFO  BaseTest -- ============= Stop test ===============
+19:28:15.961 [main] INFO  tests.BaseTest -- Test is started: test3
+19:28:24.609 [main] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
+19:28:24.610 [main] INFO  tests.BaseTest -- ===========================
+19:28:24.612 [main] INFO  tests.BaseTest -- Test is started: test4
+19:28:26.984 [main] INFO  tests.BaseTest -- Test 'Проверка очистки корзины' - FAILED
+19:28:26.984 [main] INFO  tests.BaseTest -- ===========================
+19:28:26.986 [main] INFO  tests.BaseTest -- Test is started: test5
+19:28:30.111 [main] INFO  tests.BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
+19:28:30.111 [main] INFO  tests.BaseTest -- ===========================
+19:28:30.115 [main] INFO  tests.BaseTest -- ============= Stop test ===============
 19:31:38.649 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
 19:31:38.875 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:31:38.885 [main] INFO  BaseTest -- ============ Start test =============
+19:31:38.885 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:31:38.888 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:31:40.858 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:31:41.726 [main] INFO  BaseTest -- Test is started: test3
-19:31:53.181 [main] INFO  BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
-19:31:53.182 [main] INFO  BaseTest -- ===========================
-19:31:53.185 [main] INFO  BaseTest -- Test is started: test4
-19:31:56.629 [main] INFO  BaseTest -- Test 'Проверка очистки корзины' - FAILED
-19:31:56.629 [main] INFO  BaseTest -- ===========================
-19:31:56.631 [main] INFO  BaseTest -- Test is started: test5
-19:31:59.660 [main] INFO  BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
-19:31:59.661 [main] INFO  BaseTest -- ===========================
-19:31:59.665 [main] INFO  BaseTest -- ============= Stop test ===============
+19:31:41.726 [main] INFO  tests.BaseTest -- Test is started: test3
+19:31:53.181 [main] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
+19:31:53.182 [main] INFO  tests.BaseTest -- ===========================
+19:31:53.185 [main] INFO  tests.BaseTest -- Test is started: test4
+19:31:56.629 [main] INFO  tests.BaseTest -- Test 'Проверка очистки корзины' - FAILED
+19:31:56.629 [main] INFO  tests.BaseTest -- ===========================
+19:31:56.631 [main] INFO  tests.BaseTest -- Test is started: test5
+19:31:59.660 [main] INFO  tests.BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
+19:31:59.661 [main] INFO  tests.BaseTest -- ===========================
+19:31:59.665 [main] INFO  tests.BaseTest -- ============= Stop test ===============
 19:32:59.191 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
 19:32:59.399 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:32:59.408 [main] INFO  BaseTest -- ============ Start test =============
+19:32:59.408 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:32:59.411 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:33:01.089 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:33:01.932 [main] INFO  BaseTest -- Test is started: test3
-19:33:13.395 [main] INFO  BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
-19:33:13.396 [main] INFO  BaseTest -- ===========================
-19:33:13.404 [main] INFO  BaseTest -- ============= Stop test ===============
+19:33:01.932 [main] INFO  tests.BaseTest -- Test is started: test3
+19:33:13.395 [main] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
+19:33:13.396 [main] INFO  tests.BaseTest -- ===========================
+19:33:13.404 [main] INFO  tests.BaseTest -- ============= Stop test ===============
 19:35:51.820 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
 19:35:52.028 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:35:52.037 [main] INFO  BaseTest -- ============ Start test =============
+19:35:52.037 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:35:52.040 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:35:53.745 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:35:55.026 [main] INFO  BaseTest -- Test is started: test3
-19:36:06.511 [main] INFO  BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
-19:36:06.511 [main] INFO  BaseTest -- ===========================
-19:36:06.517 [main] INFO  BaseTest -- ============= Stop test ===============
+19:35:55.026 [main] INFO  tests.BaseTest -- Test is started: test3
+19:36:06.511 [main] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - FAILED
+19:36:06.511 [main] INFO  tests.BaseTest -- ===========================
+19:36:06.517 [main] INFO  tests.BaseTest -- ============= Stop test ===============
 19:36:48.060 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
 19:36:48.280 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:36:48.289 [main] INFO  BaseTest -- ============ Start test =============
+19:36:48.289 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:36:48.294 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:36:49.907 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:36:50.863 [main] INFO  BaseTest -- Test is started: test3
-19:37:02.283 [main] INFO  BaseTest -- Test 'Успешное добавление второго товара из списка' - PASSED
-19:37:02.284 [main] INFO  BaseTest -- ===========================
-19:37:02.286 [main] INFO  BaseTest -- Test is started: test4
-19:37:05.769 [main] INFO  BaseTest -- Test 'Проверка очистки корзины' - FAILED
-19:37:05.769 [main] INFO  BaseTest -- ===========================
-19:37:05.770 [main] INFO  BaseTest -- Test is started: test5
-19:37:12.361 [main] INFO  BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
-19:37:12.361 [main] INFO  BaseTest -- ===========================
-19:37:12.365 [main] INFO  BaseTest -- ============= Stop test ===============
+19:36:50.863 [main] INFO  tests.BaseTest -- Test is started: test3
+19:37:02.283 [main] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - PASSED
+19:37:02.284 [main] INFO  tests.BaseTest -- ===========================
+19:37:02.286 [main] INFO  tests.BaseTest -- Test is started: test4
+19:37:05.769 [main] INFO  tests.BaseTest -- Test 'Проверка очистки корзины' - FAILED
+19:37:05.769 [main] INFO  tests.BaseTest -- ===========================
+19:37:05.770 [main] INFO  tests.BaseTest -- Test is started: test5
+19:37:12.361 [main] INFO  tests.BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
+19:37:12.361 [main] INFO  tests.BaseTest -- ===========================
+19:37:12.365 [main] INFO  tests.BaseTest -- ============= Stop test ===============
 19:38:32.114 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml"
 19:38:32.317 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
   /Users/larisabuga/Library/Caches/JetBrains/IdeaIC2023.3/temp-testng-customsuite.xml
 
-19:38:32.325 [main] INFO  BaseTest -- ============ Start test =============
+19:38:32.325 [main] INFO  tests.BaseTest -- ============ Start test =============
 19:38:32.329 [main] INFO  core.AppManager -- Выбран браузер - chrome
 19:38:33.918 [main] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
-19:38:35.565 [main] INFO  BaseTest -- Test is started: test4
-19:38:47.116 [main] INFO  BaseTest -- Test 'Проверка очистки корзины' - PASSED
-19:38:47.117 [main] INFO  BaseTest -- ===========================
-19:38:47.121 [main] INFO  BaseTest -- ============= Stop test ===============
+19:38:35.565 [main] INFO  tests.BaseTest -- Test is started: test4
+19:38:47.116 [main] INFO  tests.BaseTest -- Test 'Проверка очистки корзины' - PASSED
+19:38:47.117 [main] INFO  tests.BaseTest -- ===========================
+19:38:47.121 [main] INFO  tests.BaseTest -- ============= Stop test ===============
+22:20:24.818 [Test worker] DEBUG org.testng.TestNG -- suiteXmlPath: "/Users/larisabuga/IdeaProjects/cohort42-1qap/HomeWork/DemoWebShop_VOM_v2/src/test/resources/smoke.xml"
+22:20:25.147 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not start step: no test case running
+22:20:25.147 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not start step: no test case running
+22:20:25.148 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not update step: no step running
+22:20:25.148 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not stop step: no step running
+22:20:25.148 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not update step: no step running
+22:20:25.148 [Test worker] ERROR io.qameta.allure.AllureLifecycle -- Could not stop step: no step running
+22:20:25.206 [Test worker] INFO  tests.BaseTest -- ============ Start test =============
+22:20:25.216 [Test worker] INFO  core.AppManager -- Выбран браузер - chrome
+22:20:35.149 [Test worker] INFO  core.AppManager -- Открываем страницу - https://demowebshop.tricentis.com/
+22:20:35.756 [Test worker] INFO  tests.BaseTest -- Test is started: test3
+22:20:45.847 [Test worker] INFO  tests.BaseTest -- Test 'Успешное добавление второго товара из списка' - PASSED
+22:20:45.847 [Test worker] INFO  tests.BaseTest -- ===========================
+22:20:45.855 [Test worker] INFO  tests.BaseTest -- Test is started: test4
+22:20:50.303 [Test worker] INFO  tests.BaseTest -- Test 'Проверка очистки корзины' - FAILED
+22:20:50.304 [Test worker] INFO  tests.BaseTest -- ===========================
+22:20:50.305 [Test worker] INFO  tests.BaseTest -- Test is started: test5
+22:20:53.407 [Test worker] INFO  tests.BaseTest -- Test 'Проверка наличия товара в корзине' - PASSED
+22:20:53.408 [Test worker] INFO  tests.BaseTest -- ===========================
+22:20:53.411 [Test worker] INFO  tests.BaseTest -- Test is started: test2
+22:20:55.575 [Test worker] INFO  tests.BaseTest -- Test 'Проверка успешной регистрации' - PASSED
+22:20:55.575 [Test worker] INFO  tests.BaseTest -- ===========================
+22:20:55.582 [Test worker] INFO  tests.BaseTest -- Test is started: test1Sm
+22:21:01.440 [Test worker] INFO  tests.BaseTest -- Test 'Проверка успешной регистрации' - PASSED
+22:21:01.441 [Test worker] INFO  tests.BaseTest -- ===========================
+22:21:01.451 [Test worker] INFO  tests.BaseTest -- ============= Stop test ===============
