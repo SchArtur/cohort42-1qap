@@ -12,6 +12,9 @@ import org.testng.asserts.SoftAssert;
 
 import java.lang.reflect.Method;
 
+import static core.BaseHelper.takeScreenshot;
+import static core.BaseHelper.takeScreenshotPath;
+
 public class BaseTest {
     AppManager app = new AppManager(System.getProperty("browser", "chrome"));
     SoftAssert softAssert = new SoftAssert();
@@ -39,6 +42,8 @@ public class BaseTest {
             LOG.info("Test '{}' - PASSED", result.getMethod().getDescription());
         }else {
             LOG.info("Test '{}' - FAILED",result.getMethod().getDescription());
+            takeScreenshot();
+            takeScreenshotPath();
         }
         LOG.info("===========================");
     }
