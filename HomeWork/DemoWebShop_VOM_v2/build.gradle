@@ -36,6 +36,7 @@ test {
     finalizedBy('allureReport')
 }
 
+
 //tasks.register('qa', Test){
 //    useTestNG() {
 //        suites('src/test/resources/smoke.xml')
@@ -49,7 +50,7 @@ test {
 //}
 
 def registerTask(String taskName, String path) {
-    tasks.register(taskName, Test) {
+    tasks.register(taskName, Test){
         useTestNG() {
             suites(path)
         }
@@ -64,5 +65,6 @@ def registerTask(String taskName, String path) {
 
 registerTask('all', 'src/test/resources/testng.xml')
 registerTask('smoke', 'src/test/resources/smoke.xml')
+registerTask('regressionTest', 'src/test/resources/regression-tests.xml')
 
 
