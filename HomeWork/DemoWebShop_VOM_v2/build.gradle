@@ -25,14 +25,9 @@ dependencies {
 }
 
 test {
-    useTestNG() {
-        if (project.hasProperty('tags')) {
-            includeTags("${tags}")
-        }
-
-        if (project.hasProperty('browser')) {
-            systemProperty('browser', "${browser}")
-        }
+    useTestNG()
+    if (project.hasProperty('browser')) {
+        systemProperty('browser', "${browser}")
     }
     finalizedBy('allureReport')
 }
@@ -50,7 +45,7 @@ test {
 //}
 
 def registerTask(String taskName, String path) {
-    tasks.register(taskName, Test) {
+    tasks.register(taskName, Test){
         useTestNG() {
             suites(path)
         }
