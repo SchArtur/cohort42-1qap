@@ -1,5 +1,5 @@
-22:45:17.365 INFO  tests.BaseTest -- ======================================================
-22:45:17.366 INFO  tests.BaseTest -- ******************* Запуск тестов *******************
+22:45:17.365 INFO  tests.tests.BaseTest -- ======================================================
+22:45:17.366 INFO  tests.tests.BaseTest -- ******************* Запуск тестов *******************
 22:45:17.368 INFO  phonebook.core.AppManager -- Выбран браузер - chrome
 22:45:19.005 INFO  phonebook.utils.Listener -- Переход по адресу - https://telranedu.web.app
 22:45:25.164 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.xpath: //*[text()='Sign Out']
@@ -167,5 +167,5 @@
 22:46:17.250 INFO  phonebook.utils.Listener -- Поиск элемента по локатору  - By.xpath: //*[text()='Registration']
 22:46:17.255 INFO  phonebook.utils.Listener -- Клик по элементу - [[ChromeDriver: chrome on mac (7b74ee974b59e83edea9a23051d51696)] -> xpath: //*[text()='Registration']]
 22:46:22.819 INFO  phonebook.utils.Listener -- Найдены элементы [] по локатору - By.xpath: //*[text()='Sign Out']
-22:46:22.823 INFO  tests.BaseTest -- ******************* Тесты завершены *******************
-22:46:22.823 INFO  tests.BaseTest -- ======================================================
+22:46:22.823 INFO  tests.tests.BaseTest -- ******************* Тесты завершены *******************
+22:46:22.823 INFO  tests.tests.BaseTest -- ======================================================

@@ -5,4 +5,6 @@ include 'Lesson:Selenium_PhoneBook_v1'
 include 'Lesson:Selenium_PhoneBook_VOM_v2'
 include 'Lesson:Selenium_PhoneBook_POM_v2'
 include 'HomeWork'
+include 'Lesson:Selenium_DemoQa'
+findProject(':Lesson:Selenium_DemoQa')?.name = 'Selenium_DemoQa'
 
