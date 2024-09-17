@@ -12,36 +12,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import theIntertet.helpers.*;
+import theIntertet.helpers.JavaScriptAlertsPage;
 import theIntertet.utils.Listener;
 
 import java.time.Duration;
 
 
 public class AppManager {
-    public static final Logger LOG = LoggerFactory.getLogger(AppManager.class);
-    public static final String URL = "https://the-internet.herokuapp.com/";
+       public static final Logger LOG = LoggerFactory.getLogger(AppManager.class);
+    public static final String URL = "https://the-internet.herokuapp.com/javascript_alerts";
 
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-    public static HomePage homePage;
-
     public static JavaScriptAlertsPage alertsPage;
-
-    public static MultipleWindowsPage multipleWindows;
-
-    public static NestedFramesPage nestedFrames;
-
-    public static DragAndDropPage dragAndDrop;
-
-    public static ContextMenuPage contextMenu;
-    public static JQueryUIPage jQueryUI;
-    public static HoversPage hoversPage;
-
-
-
-
 
     private String browser;
 
@@ -71,15 +55,7 @@ public class AppManager {
         driver = new EventFiringDecorator<>(listener).decorate(driver);
         driver.get(URL);
 
-        homePage = new HomePage();
         alertsPage = new JavaScriptAlertsPage();
-        multipleWindows = new MultipleWindowsPage();
-        nestedFrames = new NestedFramesPage();
-        dragAndDrop = new DragAndDropPage();
-        contextMenu = new ContextMenuPage();
-        jQueryUI = new JQueryUIPage();
-        homePage = new HomePage();
-
 
     }
 
