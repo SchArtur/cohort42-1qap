@@ -77,7 +77,7 @@ public class BasePage {
     }
 
     public void scrollPage() {
-        js.executeScript("window.scrollBy(0,300)");
+        js.executeScript("window.scrollBy(0,600)");
     }
 
 

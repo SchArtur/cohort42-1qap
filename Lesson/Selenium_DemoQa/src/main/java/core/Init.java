@@ -35,7 +35,7 @@ public class Init {
         options.addArguments("--disable-search-engine-choice-screen");
 //        options.addArguments("headless"); // не будет открывать окно браузера, но тесты проходить будут
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));

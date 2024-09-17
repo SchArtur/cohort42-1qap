@@ -19,8 +19,11 @@ public class RegisterPage extends BasePage {
     @FindBy(id = "password")
     public WebElement passwordField;
 
-    @FindBy(id = "recaptcha-anchor")
+    @FindBy(xpath = "//span[@id='recaptcha-anchor']")
     public WebElement captchaCheckbox;
+
+    @FindBy(xpath = "//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")
+    public WebElement captchaFrame;
 
     @FindBy(id = "register")
     public WebElement registerButton;
@@ -30,8 +33,11 @@ public class RegisterPage extends BasePage {
 
     public void fillRegisterForm(User user) {
         fillInputField(firstNameField, user.getFirstName());
+        waitInSeconds(1);
         fillInputField(lastNameField, user.getLastName());
+        waitInSeconds(1);
         fillInputField(loginField, user.getEmail());
+        waitInSeconds(1);
         fillInputField(passwordField, user.getPassword());
     }
 }
