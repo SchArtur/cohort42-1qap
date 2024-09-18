@@ -10,7 +10,7 @@ public class JavaScriptAlertsPage extends BasePage {
     @FindBy(css = "button[onclick='jsAlert()']")
     WebElement alertButton;
 
-    @FindBy(css = "button[onclick='jsConfirm()']")
+    @FindBy(css = "[onclick='jsConfirm()']")
      WebElement confirmButton;
 
     @FindBy(css = "button[onclick='jsPrompt()']")

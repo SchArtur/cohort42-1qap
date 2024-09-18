@@ -28,14 +28,26 @@ public class JavaScriptAlertsTest extends BaseTest {
     @DisplayName("Проверка кнопки JS Confir")
     void test2() {
         alertsPage.clickJsConfirmButton();
+        String testMsg1 = "You clicked: Ok";
         Alert alert = alertsPage.getAlert();
         alert.accept();
-        Assertions.assertTrue(alertsPage.resultText().contains("You clicked: Ok"), "Текст всплывающего уведомления не соответствует ожидаемому, после нажатия кнопки ОК");
+        Assertions.assertTrue(alertsPage.resultText().contains(testMsg1), "Текст всплывающего уведомления не соответствует ожидаемому, после нажатия кнопки 'ОК'");
     }
+
+@Test
+@DisplayName("Проверка кнопки JS Confir")
+    void test3() {
+        alertsPage.clickJsConfirmButton();
+        String testMsg2 = "You clicked: Cancel";
+        Alert alert = alertsPage.getAlert();
+        alert.dismiss();
+        Assertions.assertTrue(alertsPage.resultText().contains(testMsg2), "Текст всплывающего уведомления не соответствует ожидаемому, после нажатия кнопки 'Cancel'");
+    }
+
 
     @Test
     @DisplayName("Проверка кнопки JS Prompt")
-    void test3() {
+    void test4() {
         alertsPage.clickJsPromptButton();
         String testMsg = "Hello";
         Alert alert = alertsPage.getAlert();
