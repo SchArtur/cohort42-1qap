@@ -11,4 +11,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[text()='Book Store Application']")
     public WebElement bookStoreAppCard;
 
+    @FindBy(xpath = "//*[text()='Forms']")
+    public WebElement formsCard;
+
 }
