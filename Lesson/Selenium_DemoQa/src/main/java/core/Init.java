@@ -5,11 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.alerts_frame_windows.AlertsPage;
+import pages.alerts_frame_windows.*;
 import pages.HomePage;
 import pages.LeftPanel;
 import pages.book_store.LoginPage;
 import pages.book_store.RegisterPage;
+import pages.forms.PracticeFormPage;
 
 import java.time.Duration;
 import java.util.logging.Logger;
@@ -26,6 +27,11 @@ public class Init {
     public static AlertsPage alertsPage;
     public static LoginPage loginPage;
     public static RegisterPage registerPage;
+    public static BrowserWindowsPage browserWindowsPage;
+    public static FramesPage framesPage;
+    public static NestedFramesPage nestedFramesPage;
+    public static ModalDialogsPage modalDialogsPage;
+    public static PracticeFormPage practiceFormPage;
 
     public static final User TEST_USER = new User("testg@mail.com", "Manuel1234$");
     public static final User USER_FOR_REGISTRATION = new User(getRandomValue(), getRandomValue(), getRandomEmail(), "Manuel1234$");
@@ -37,8 +43,8 @@ public class Init {
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 //        driver.manage().window().maximize();
         driver.get(URL);
         homePage = new HomePage();
@@ -46,6 +52,11 @@ public class Init {
         alertsPage = new AlertsPage();
         loginPage = new LoginPage();
         registerPage = new RegisterPage();
+        browserWindowsPage = new BrowserWindowsPage();
+        framesPage = new FramesPage();
+        nestedFramesPage = new NestedFramesPage();
+        modalDialogsPage = new ModalDialogsPage();
+        practiceFormPage = new PracticeFormPage();
     }
 
     public void stop() {

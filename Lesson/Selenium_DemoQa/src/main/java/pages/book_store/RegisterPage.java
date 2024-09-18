@@ -33,11 +33,8 @@ public class RegisterPage extends BasePage {
 
     public void fillRegisterForm(User user) {
         fillInputField(firstNameField, user.getFirstName());
-        waitInSeconds(1);
         fillInputField(lastNameField, user.getLastName());
-        waitInSeconds(1);
         fillInputField(loginField, user.getEmail());
-        waitInSeconds(1);
         fillInputField(passwordField, user.getPassword());
     }
 }

@@ -1,9 +1,6 @@
 package tests.book_store;
 
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import tests.BaseTest;
 
 import static core.Init.*;
@@ -28,12 +25,12 @@ public class RegisterTests extends BaseTest {
     @Test
     @DisplayName("Register to Book Store - valid data")
     void test1() {
-        registerPage.fillRegisterForm(USER_FOR_REGISTRATION);
-        registerPage.waitInSeconds(1);
+        registerPage.waitInSeconds(5);
         wait.until(frameToBeAvailableAndSwitchToIt(registerPage.captchaFrame));
         registerPage.clickOnElement(registerPage.captchaCheckbox);
+        registerPage.waitInSeconds(5);
         driver.switchTo().defaultContent();
-        registerPage.waitInSeconds(10);
+        registerPage.fillRegisterForm(USER_FOR_REGISTRATION);
         registerPage.clickOnElement(registerPage.registerButton);
         Assertions.assertEquals("User Register Successfully.", registerPage.getAlertText());
     }

@@ -48,6 +48,7 @@ public class BasePage {
 
     public Alert getAlert() {
         return wait.until(ExpectedConditions.alertIsPresent());
+//        return driver.switchTo().alert();
     }
 
     public String getTitleTextCenter() {
