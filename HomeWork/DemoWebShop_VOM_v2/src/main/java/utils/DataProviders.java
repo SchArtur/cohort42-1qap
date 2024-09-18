@@ -32,7 +32,8 @@ public class DataProviders {
             while (line != null) {
                 String[] splitLine = line.split(",");
                 User user = new User(splitLine[0], splitLine[1]);
-                objects.add(new Object[]{user, splitLine[2], splitLine[3], splitLine[4]});
+                Registration registration = new Registration(splitLine[2], splitLine[3]);
+                objects.add(new Object[]{user, registration});
                 line = reader.readLine();
             }
         } catch (FileNotFoundException e) {

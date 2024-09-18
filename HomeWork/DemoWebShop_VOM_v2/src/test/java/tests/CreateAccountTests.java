@@ -22,7 +22,9 @@ public class CreateAccountTests extends BaseTest {
         createAccountHelper.fillInTheFieldsForTheNewUser(TEST_USER, NEW_REGISTRATION);
         createAccountHelper.clickOnRegisterButton();
         createAccountHelper.clickLogOutButton();
-    } @Test(description = "Проверка не успешной регистрации", groups = {"Negative"},dataProvider = "getUsers",dataProviderClass = DataProviders.class)
+    }
+
+    @Test(description = "Проверка не успешной регистрации", groups = {"Negative"},dataProvider = "getUsers",dataProviderClass = DataProviders.class)
     void test3(User user, Registration registration) {
         createAccountHelper.clickOnRegisterLink();
         createAccountHelper.fillInTheFieldsForTheNewUser(user, registration);

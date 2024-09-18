@@ -44,17 +44,4 @@ test {
     finalizedBy('allureReport')
 }
 
-task smoke(type: Test) {
-    useJUnitPlatform() {
-        includeTags("@SMOKE")
-
-        if (project.hasProperty('browser')) {
-            systemProperty('browser', "${browser}")
-        }
-    }
-    testLogging {
-        events("passed", "skipped", "failed")
-    }
-    finalizedBy('allureReport')
-}
 
