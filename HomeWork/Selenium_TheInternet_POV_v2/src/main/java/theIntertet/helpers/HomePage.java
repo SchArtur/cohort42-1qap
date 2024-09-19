@@ -16,15 +16,4 @@ public class HomePage extends BasePage {
     @FindBy(css = "[href='/windows']")
     public WebElement  multipleWindowsLink;
 
-    @FindBy(css = "[href='/drag_and_drop']")
-    public WebElement  dragWindowsLink;
-
-    @FindBy(css = "[href='/context_menu']")
-    public WebElement  contextMenuWindowsLink;
-
-    @FindBy(css = "[href='/jqueryui/menu']")
-    public WebElement  jqueryuiLink;
-
-    @FindBy(css = "[href='/hovers']")
-    public WebElement  hoversLink;
 }

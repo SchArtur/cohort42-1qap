@@ -12,20 +12,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import theIntertet.helpers.HomePage;
 import theIntertet.helpers.JavaScriptAlertsPage;
+import theIntertet.helpers.MultipleWindowsPage;
+import theIntertet.helpers.NestedFramesPage;
 import theIntertet.utils.Listener;
 
 import java.time.Duration;
 
 
 public class AppManager {
-       public static final Logger LOG = LoggerFactory.getLogger(AppManager.class);
-    public static final String URL = "https://the-internet.herokuapp.com/javascript_alerts";
+    public static final Logger LOG = LoggerFactory.getLogger(AppManager.class);
+    public static final String URL = "https://the-internet.herokuapp.com/";
 
     public static WebDriver driver;
     public static WebDriverWait wait;
 
+    public static HomePage homePage;
+
     public static JavaScriptAlertsPage alertsPage;
+
+    public static MultipleWindowsPage multipleWindows;
+
+    public static NestedFramesPage nestedFrames;
+
+
 
     private String browser;
 
@@ -55,7 +66,10 @@ public class AppManager {
         driver = new EventFiringDecorator<>(listener).decorate(driver);
         driver.get(URL);
 
+        homePage = new HomePage();
         alertsPage = new JavaScriptAlertsPage();
+        multipleWindows = new MultipleWindowsPage();
+        nestedFrames = new NestedFramesPage();
 
     }
 

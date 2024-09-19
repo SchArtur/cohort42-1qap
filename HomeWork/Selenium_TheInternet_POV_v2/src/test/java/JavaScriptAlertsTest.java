@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.Alert;
@@ -10,12 +7,18 @@ import theIntertet.core.BasePage;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static theIntertet.core.AppManager.alertsPage;
+import static theIntertet.core.AppManager.homePage;
 
 @Tag("@ALL")
 @Tag("@ABOUT")
 @Tag("@SMOKE")
 public class JavaScriptAlertsTest extends BaseTest {
 
+
+    @BeforeAll
+    static void getAlertsPage() {
+        homePage.alertWindowsLink.click();
+    }
     @Test
     @DisplayName("Проверка кнопки JS Alert")
     void test1() {
