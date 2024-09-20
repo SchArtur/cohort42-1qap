@@ -25,4 +25,11 @@ public class LeftPanel extends BasePage {
 
     @FindBy(xpath = "//*[text()='Practice Form']")
     public WebElement practiceFormButton;
+
+    @FindBy(xpath = "//*[text()='Select Menu']")
+    public WebElement selectMenuButton;
+
+
+    @FindBy(xpath = "//*[text()='Slider']")
+    public WebElement sliderButton;
 }

@@ -14,4 +14,6 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[text()='Forms']")
     public WebElement formsCard;
 
+    @FindBy(xpath = "//*[text()='Widgets']")
+    public WebElement widgetsCard;
 }
