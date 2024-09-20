@@ -9,16 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static theIntertet.core.AppManager.alertsPage;
 import static theIntertet.core.AppManager.homePage;
 
-@Tag("@ALL")
-@Tag("@ABOUT")
-@Tag("@SMOKE")
 public class JavaScriptAlertsTest extends BaseTest {
-
 
     @BeforeAll
     static void getAlertsPage() {
         homePage.alertWindowsLink.click();
     }
+
     @Test
     @DisplayName("Проверка кнопки JS Alert")
     void test1() {
@@ -37,8 +34,8 @@ public class JavaScriptAlertsTest extends BaseTest {
         Assertions.assertTrue(alertsPage.resultText().contains(testMsg1), "Текст всплывающего уведомления не соответствует ожидаемому, после нажатия кнопки 'ОК'");
     }
 
-@Test
-@DisplayName("Проверка кнопки JS Confir")
+    @Test
+    @DisplayName("Проверка кнопки JS Confir")
     void test3() {
         alertsPage.clickJsConfirmButton();
         String testMsg2 = "You clicked: Cancel";
@@ -46,7 +43,6 @@ public class JavaScriptAlertsTest extends BaseTest {
         alert.dismiss();
         Assertions.assertTrue(alertsPage.resultText().contains(testMsg2), "Текст всплывающего уведомления не соответствует ожидаемому, после нажатия кнопки 'Cancel'");
     }
-
 
     @Test
     @DisplayName("Проверка кнопки JS Prompt")
