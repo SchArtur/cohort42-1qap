@@ -19,12 +19,10 @@ public class JavaScriptAlertsPages extends BasePage {
     public void clickAlertButton() {
         clickOnElement(alertButton);
     }
-
     @Step("Click for JS Confirm")
     public void clickConfirmButton() {
         clickOnElement(confirmButton);
     }
-
     @Step("Click for JS Prompt")
     public void clickPromtButton() {
         clickOnElement(promtButton);

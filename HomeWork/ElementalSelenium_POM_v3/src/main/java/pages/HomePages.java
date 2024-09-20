@@ -1,0 +1,14 @@
+package pages;
+
+import core.BasePage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class HomePages extends BasePage {
+    @FindBy(css="[href='/javascript_alerts']")
+    public WebElement jsAlertsLink;
+    @FindBy(css="[href='/windows']")
+    public WebElement multipleWindowsLink;
+    @FindBy(css="[href='/nested_frames']")
+    public WebElement nestedFramesLink;
+}
