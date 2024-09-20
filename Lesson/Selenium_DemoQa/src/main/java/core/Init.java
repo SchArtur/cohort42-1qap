@@ -11,6 +11,8 @@ import pages.LeftPanel;
 import pages.book_store.LoginPage;
 import pages.book_store.RegisterPage;
 import pages.forms.PracticeFormPage;
+import pages.widgets.SelectMenuPage;
+import pages.widgets.SliderPage;
 
 import java.time.Duration;
 import java.util.logging.Logger;
@@ -32,6 +34,8 @@ public class Init {
     public static NestedFramesPage nestedFramesPage;
     public static ModalDialogsPage modalDialogsPage;
     public static PracticeFormPage practiceFormPage;
+    public static SelectMenuPage selectMenuPage;
+    public static SliderPage sliderPage;
 
     public static final User TEST_USER = new User("testg@mail.com", "Manuel1234$");
     public static final User USER_FOR_REGISTRATION = new User(getRandomValue(), getRandomValue(), getRandomEmail(), "Manuel1234$");
@@ -57,6 +61,8 @@ public class Init {
         nestedFramesPage = new NestedFramesPage();
         modalDialogsPage = new ModalDialogsPage();
         practiceFormPage = new PracticeFormPage();
+        selectMenuPage = new SelectMenuPage();
+        sliderPage = new SliderPage();
     }
 
     public void stop() {

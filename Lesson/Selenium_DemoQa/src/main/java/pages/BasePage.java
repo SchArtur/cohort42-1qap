@@ -97,5 +97,4 @@ public class BasePage {
         return new String(result);
     }
 
-
 }
