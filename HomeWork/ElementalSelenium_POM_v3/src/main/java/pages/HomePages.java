@@ -11,4 +11,6 @@ public class HomePages extends BasePage {
     public WebElement multipleWindowsLink;
     @FindBy(css="[href='/nested_frames']")
     public WebElement nestedFramesLink;
+    @FindBy(css="[href='/horizontal_slider']")
+    public WebElement horizontalSliderLink;
 }

@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.HomePages;
-import pages.JavaScriptAlertsPages;
-import pages.MultipleWindowsPages;
-import pages.NestedFramesPages;
+import pages.*;
 import utils.Listener;
 
 import java.time.Duration;
@@ -21,6 +18,7 @@ public class AppManager {
     public static JavaScriptAlertsPages javaScriptAlertsPages;
     public static NestedFramesPages nestedFramesPages;
     public static MultipleWindowsPages multipleWindowsPages;
+    public static HorizontalSliderPages horizontalSliderPages;
     public static final String URL = "https://the-internet.herokuapp.com";
 
     public void init() {
@@ -33,21 +31,17 @@ public class AppManager {
 
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-
-        // Увеличение таймаутов
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));  // Увеличено время ожидания загрузки страницы
-
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         WebDriverListener listener = new Listener();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
 
-        // Инициализация страниц
         homePages = new HomePages();
         javaScriptAlertsPages = new JavaScriptAlertsPages();
         nestedFramesPages = new NestedFramesPages();
         multipleWindowsPages = new MultipleWindowsPages();
+        horizontalSliderPages=new HorizontalSliderPages();
 
-        // Переход на URL
         driver.get(URL);
     }
 
