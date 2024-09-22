@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -21,10 +22,12 @@ import static core.AppManager.URL;
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
+    JavascriptExecutor js;
 
     public BasePage() {
         this.driver = AppManager.driver;
         this.wait = AppManager.wait;
+        this.js = (JavascriptExecutor) driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -90,6 +93,17 @@ public class BasePage {
         return new String(result);
     }
 
+    public static String getRandomValue() {
+        char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+        Random random = new SecureRandom();
+        char[] result = new char[6];
+        for (int i = 0; i < result.length; i++) {
+            int randomIndex = random.nextInt(chars.length);
+            result[i] = chars[randomIndex];
+        }
+        return new String(result);
+    }
+
     @Step("Ожидаем {0} секунд")
     protected void waitInSeconds(int seconds) {
         try {
@@ -97,6 +111,14 @@ public class BasePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void jsClickElement(WebElement element) {
+        js.executeScript("arguments[0].click()", element);
+    }
+
+    public void scrollPage() {
+        js.executeScript("window.scrollBy(0,600)");
     }
 
 //    @Attachment(value = "Screenshot", type = "image/png")
@@ -119,32 +141,31 @@ public class BasePage {
         }
         return screenshot.getAbsolutePath();
     }
-   @Step("Метод для работы с alert")
-   public void handleAlert(String action, String text) {
-       Alert alert = driver.switchTo().alert();
-       switch (action.toLowerCase()) {
-           case "accept":
-               // Для простого alert или confirm - нажимаем OK
-               alert.accept();
-               break;
 
-           case "dismiss":
-               // Для confirm - нажимаем Cancel
-               alert.dismiss();
-               break;
+    @Step("Метод для работы с alert")
+    public void handleAlert(String action, String text) {
+        Alert alert = driver.switchTo().alert();
+        switch (action.toLowerCase()) {
+            case "accept":
+                // Для простого alert или confirm - нажимаем OK
+                alert.accept();
+                break;
 
-           case "prompt":
-               // Для prompt - вводим текст и нажимаем OK
-               if (text != null) {
-                   alert.sendKeys(text);
-               }
-               alert.accept();
-               break;
+            case "dismiss":
+                // Для confirm - нажимаем Cancel
+                alert.dismiss();
+                break;
 
-           default:
-               throw new IllegalArgumentException("Invalid action: " + action);
-       }
-   }
+            case "prompt":
+                // Для prompt - вводим текст и нажимаем OK
+                if (text != null) {
+                    alert.sendKeys(text);
+                }
+                alert.accept();
+                break;
 
-
+            default:
+                throw new IllegalArgumentException("Invalid action: " + action);
+        }
+    }
 }
