@@ -6,11 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tests.BaseTest;
 
-import java.util.List;
-
 import static core.Init.*;
 
-public class SliderTests extends BaseTest {
+public class ToolTipsTests extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {
         homePage.widgetsCard.click();
@@ -18,15 +16,15 @@ public class SliderTests extends BaseTest {
 
     @BeforeEach
     void preconditions() {
-        if (!selectMenuPage.titleTextCenterIsDisplayed() || !selectMenuPage.getTitleTextCenter().equals("Select Menu")) {
+        if (!selectMenuPage.titleTextCenterIsDisplayed() || !selectMenuPage.getTitleTextCenter().equals("Tool Tips")) {
             leftPanel.scrollPage();
-            leftPanel.sliderButton.click();
+            leftPanel.toolTipsButton.click();
         }
     }
 
     @Test
     void test1() {
-        sliderPage.moveSliderOnKeyboard(20);
-        Assertions.assertEquals("20", sliderPage.sliderValue.getAttribute("value"));
+        toolTipsPage.hoverToButton();
+        Assertions.assertEquals("You hovered over the Button", toolTipsPage.getTooltipText());
     }
 }

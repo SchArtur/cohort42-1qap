@@ -29,7 +29,14 @@ public class LeftPanel extends BasePage {
     @FindBy(xpath = "//*[text()='Select Menu']")
     public WebElement selectMenuButton;
 
-
     @FindBy(xpath = "//*[text()='Slider']")
     public WebElement sliderButton;
+
+    @FindBy(xpath = "//*[text()='Tool Tips']")
+    public WebElement toolTipsButton;
+
+    @FindBy(xpath = "//*[text()='Droppable']")
+    public WebElement droppableButton;
+    @FindBy(xpath = "//*[text()='Buttons']")
+    public WebElement buttonsButton;
 }

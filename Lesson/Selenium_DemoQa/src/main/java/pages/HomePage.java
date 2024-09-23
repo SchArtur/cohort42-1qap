@@ -16,4 +16,10 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//*[text()='Widgets']")
     public WebElement widgetsCard;
+
+    @FindBy(xpath = "//*[text()='Interactions']")
+    public WebElement interactionsCard;
+
+    @FindBy(xpath = "//*[text()='Elements']")
+    public WebElement elementsCard;
 }
