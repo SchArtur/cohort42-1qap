@@ -22,7 +22,7 @@ public class BasePage {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
-    JavascriptExecutor js;
+    protected JavascriptExecutor js;
 
     public BasePage() {
         this.driver = Init.driver;

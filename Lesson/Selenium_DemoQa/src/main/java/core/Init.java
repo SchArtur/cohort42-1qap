@@ -10,12 +10,14 @@ import pages.HomePage;
 import pages.LeftPanel;
 import pages.book_store.LoginPage;
 import pages.book_store.RegisterPage;
+import pages.elements.ButtonsPage;
 import pages.forms.PracticeFormPage;
+import pages.interactions.DroppablePage;
 import pages.widgets.SelectMenuPage;
 import pages.widgets.SliderPage;
+import pages.widgets.ToolTipsPage;
 
 import java.time.Duration;
-import java.util.logging.Logger;
 
 import static pages.BasePage.getRandomEmail;
 import static pages.BasePage.getRandomValue;
@@ -36,6 +38,9 @@ public class Init {
     public static PracticeFormPage practiceFormPage;
     public static SelectMenuPage selectMenuPage;
     public static SliderPage sliderPage;
+    public static ToolTipsPage toolTipsPage;
+    public static DroppablePage droppablePage;
+    public static ButtonsPage buttonsPage;
 
     public static final User TEST_USER = new User("testg@mail.com", "Manuel1234$");
     public static final User USER_FOR_REGISTRATION = new User(getRandomValue(), getRandomValue(), getRandomEmail(), "Manuel1234$");
@@ -63,6 +68,9 @@ public class Init {
         practiceFormPage = new PracticeFormPage();
         selectMenuPage = new SelectMenuPage();
         sliderPage = new SliderPage();
+        toolTipsPage = new ToolTipsPage();
+        droppablePage = new DroppablePage();
+        buttonsPage = new ButtonsPage();
     }
 
     public void stop() {
