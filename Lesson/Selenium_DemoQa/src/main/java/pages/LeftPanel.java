@@ -37,6 +37,17 @@ public class LeftPanel extends BasePage {
 
     @FindBy(xpath = "//*[text()='Droppable']")
     public WebElement droppableButton;
+
     @FindBy(xpath = "//*[text()='Buttons']")
     public WebElement buttonsButton;
+
+    @FindBy(xpath = "//*[text()='Broken Links - Images']")
+    public WebElement brokenLinksImagesButton;
+
+    @FindBy(xpath = "//*[text()='Links']")
+    public WebElement linksButton;
+
+    @FindBy(xpath = "//*[text()='Upload and Download']")
+    public WebElement uploadAndDownloadButton;
 }
+

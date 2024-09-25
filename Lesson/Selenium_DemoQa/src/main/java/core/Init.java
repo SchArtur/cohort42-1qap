@@ -10,7 +10,10 @@ import pages.HomePage;
 import pages.LeftPanel;
 import pages.book_store.LoginPage;
 import pages.book_store.RegisterPage;
+import pages.elements.BrokenLinksImagesPage;
 import pages.elements.ButtonsPage;
+import pages.elements.LinksPage;
+import pages.elements.UploadAndDownloadPage;
 import pages.forms.PracticeFormPage;
 import pages.interactions.DroppablePage;
 import pages.widgets.SelectMenuPage;
@@ -41,6 +44,10 @@ public class Init {
     public static ToolTipsPage toolTipsPage;
     public static DroppablePage droppablePage;
     public static ButtonsPage buttonsPage;
+    public static BrokenLinksImagesPage brokenLinksImagesPage;
+    public static LinksPage linksPage;
+    public static UploadAndDownloadPage uploadAndDownloadPage;
+    public static final String O_S = System.getProperty("os", "mac");
 
     public static final User TEST_USER = new User("testg@mail.com", "Manuel1234$");
     public static final User USER_FOR_REGISTRATION = new User(getRandomValue(), getRandomValue(), getRandomEmail(), "Manuel1234$");
@@ -53,7 +60,7 @@ public class Init {
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
+//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 //        driver.manage().window().maximize();
         driver.get(URL);
         homePage = new HomePage();
@@ -71,6 +78,9 @@ public class Init {
         toolTipsPage = new ToolTipsPage();
         droppablePage = new DroppablePage();
         buttonsPage = new ButtonsPage();
+        brokenLinksImagesPage = new BrokenLinksImagesPage();
+        linksPage = new LinksPage();
+        uploadAndDownloadPage = new UploadAndDownloadPage();
     }
 
     public void stop() {
