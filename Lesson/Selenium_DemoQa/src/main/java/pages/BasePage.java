@@ -10,6 +10,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.SecureRandom;
 import java.time.Duration;
 import java.util.List;
@@ -96,6 +100,52 @@ public class BasePage {
         }
         return new String(result);
     }
+
+    public String getLink(WebElement element) {
+        String resultLink = element.getAttribute("href");
+        if (resultLink == null) {
+            return element.getAttribute("src");
+        }
+        return resultLink;
+    }
+
+    //Метод проверяет наличие картинки
+    public boolean imageIsDisplayed(WebElement image) {
+        return (boolean) js.executeScript("return (typeof arguments[0].naturalWidth != undefined && arguments[0].naturalWidth > 0 );", image);
+    }
+
+    //Метод проверяет валидность ссылки
+    //Статус коды ответов по группам
+    //100 - информационные
+    //200 - успешные
+    //300 - перенаправление, переадресация, redirect
+    //400 - ошибки клиента
+    //500 - ошибки сервера
+    public boolean linkIsValid(String link) {
+        try {
+            URL url = new URL(link);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.connect();
+            int statusCode = connection.getResponseCode();
+            if (statusCode >= 400) {
+                System.out.printf("Ссылка - %s, код ответа %s, сообщение ответа %s - BROKEN\n", link, statusCode, connection.getResponseMessage());
+            } else {
+                System.err.printf("Ссылка - %s, код ответа %s, сообщение ответа %s - VALID\n", link, statusCode, connection.getResponseMessage());
+            }
+            return  statusCode < 400;
+        } catch (MalformedURLException e) {
+            System.err.printf("Вместо ссылки переданы не корректные данные - %s\n", link);
+            return false;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean linkIsValid(WebElement linkElement) {
+        return linkIsValid(getLink(linkElement));
+    }
+
 
     // Метод, который будет отключать рекламу и её блоки
     public void hideAds() {
