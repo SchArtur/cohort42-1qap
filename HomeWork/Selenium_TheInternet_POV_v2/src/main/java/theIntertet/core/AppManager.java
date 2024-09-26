@@ -12,10 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import theIntertet.helpers.HomePage;
-import theIntertet.helpers.JavaScriptAlertsPage;
-import theIntertet.helpers.MultipleWindowsPage;
-import theIntertet.helpers.NestedFramesPage;
+import theIntertet.helpers.*;
 import theIntertet.utils.Listener;
 
 import java.time.Duration;
@@ -35,6 +32,12 @@ public class AppManager {
     public static MultipleWindowsPage multipleWindows;
 
     public static NestedFramesPage nestedFrames;
+
+    public static DragAndDropPage dragAndDrop;
+
+    public static ContextMenuPage contextMenu;
+
+
 
 
 
@@ -70,6 +73,9 @@ public class AppManager {
         alertsPage = new JavaScriptAlertsPage();
         multipleWindows = new MultipleWindowsPage();
         nestedFrames = new NestedFramesPage();
+        dragAndDrop = new DragAndDropPage();
+        contextMenu = new ContextMenuPage();
+
 
     }
 
