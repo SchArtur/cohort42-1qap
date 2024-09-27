@@ -15,10 +15,11 @@ public class AppManager {
     public static WebDriver driver;
     public static WebDriverWait wait;
     public static HomePages homePages;
-    public static JavaScriptAlertsPages javaScriptAlertsPages;
-    public static NestedFramesPages nestedFramesPages;
-    public static MultipleWindowsPages multipleWindowsPages;
-    public static HorizontalSliderPages horizontalSliderPages;
+    public static JavaScriptAlertsPage javaScriptAlertsPages;
+    public static NestedFramesPage nestedFramesPages;
+    public static MultipleWindowsPage multipleWindowsPages;
+    public static HorizontalSliderPage horizontalSliderPages;
+    public static JQueryUIMenuPage jQueryUIMenuPage;
     public static final String URL = "https://the-internet.herokuapp.com";
 
     public void init() {
@@ -37,10 +38,11 @@ public class AppManager {
         driver = new EventFiringDecorator<>(listener).decorate(driver);
 
         homePages = new HomePages();
-        javaScriptAlertsPages = new JavaScriptAlertsPages();
-        nestedFramesPages = new NestedFramesPages();
-        multipleWindowsPages = new MultipleWindowsPages();
-        horizontalSliderPages=new HorizontalSliderPages();
+        javaScriptAlertsPages = new JavaScriptAlertsPage();
+        nestedFramesPages = new NestedFramesPage();
+        multipleWindowsPages = new MultipleWindowsPage();
+        horizontalSliderPages = new HorizontalSliderPage();
+        jQueryUIMenuPage = new JQueryUIMenuPage();
 
         driver.get(URL);
     }

@@ -5,7 +5,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class JavaScriptAlertsPages extends BasePage {
+public class JavaScriptAlertsPage extends BasePage {
     @FindBy(css = "[onclick='jsAlert()']")
     WebElement alertButton;
     @FindBy(css = "[onclick='jsConfirm()']")

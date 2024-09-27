@@ -13,4 +13,6 @@ public class HomePages extends BasePage {
     public WebElement nestedFramesLink;
     @FindBy(css="[href='/horizontal_slider']")
     public WebElement horizontalSliderLink;
+    @FindBy(css="[href='/jqueryui/menu']")
+    public WebElement jqueryuiMenuLink;
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.Alert;
 import static core.AppManager.homePages;
 import static core.AppManager.javaScriptAlertsPages;
 
-public class JavaScriptsAlertsTests extends BaseTest {
+public class JavaScriptsAlertsTest extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {
         homePages.jsAlertsLink.click();

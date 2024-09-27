@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static core.AppManager.homePages;
 import static core.AppManager.horizontalSliderPages;
 
-public class HorizontalSliderTests extends BaseTest {
+public class HorizontalSliderTest extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {
         homePages.horizontalSliderLink.click();
