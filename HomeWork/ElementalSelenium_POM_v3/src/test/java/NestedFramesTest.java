@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static core.AppManager.*;
 
-public class NestedFramesTests extends BaseTest{
+public class NestedFramesTest extends BaseTest{
     @BeforeAll
     static void getAlertsPage() {
         homePages.nestedFramesLink.click();

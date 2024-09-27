@@ -4,7 +4,7 @@ import core.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class NestedFramesPages extends BasePage {
+public class NestedFramesPage extends BasePage {
     @FindBy(css = "[src='/frame_top']")
     public WebElement frameTop;
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class HorizontalSliderPages extends BasePage {
+public class HorizontalSliderPage extends BasePage {
     @FindBy(tagName = "h3")
     public WebElement sliderTitle;
 
@@ -33,7 +33,7 @@ public class HorizontalSliderPages extends BasePage {
 //        return this;
 //    }
 
-    public HorizontalSliderPages moveSlider(double value) {
+    public HorizontalSliderPage moveSlider(double value) {
         int sliderWidth = slider.getSize().getWidth();
         int offset = (int) ((value / 5) * sliderWidth);
         new Actions(driver).clickAndHold(slider).moveByOffset(offset, 0).release().build().perform();

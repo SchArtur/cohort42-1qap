@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultipleWindowsPages extends BasePage {
-    @FindBy(xpath = "//h3[text()='Opening a new window']")
+public class MultipleWindowsPage extends BasePage {
+    @FindBy(xpath = "//*[contains(text(),'new')]")
     public WebElement browserWindowsText;
     @FindBy(xpath = "//a[text()='Click Here']")
     public WebElement newWindowsLink;

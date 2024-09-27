@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static core.AppManager.*;
 
-public class MultipleWindowsTests extends BaseTest {
+public class MultipleWindowsTest extends BaseTest {
    @BeforeAll
     static void getAlertsPage(){
        homePages.multipleWindowsLink.click();
