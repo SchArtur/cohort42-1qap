@@ -10,10 +10,7 @@ import pages.HomePage;
 import pages.LeftPanel;
 import pages.book_store.LoginPage;
 import pages.book_store.RegisterPage;
-import pages.elements.BrokenLinksImagesPage;
-import pages.elements.ButtonsPage;
-import pages.elements.LinksPage;
-import pages.elements.UploadAndDownloadPage;
+import pages.elements.*;
 import pages.forms.PracticeFormPage;
 import pages.interactions.DroppablePage;
 import pages.widgets.SelectMenuPage;
@@ -47,6 +44,9 @@ public class Init {
     public static BrokenLinksImagesPage brokenLinksImagesPage;
     public static LinksPage linksPage;
     public static UploadAndDownloadPage uploadAndDownloadPage;
+    public static TextBoxPage textBoxPage;
+
+
     public static final String O_S = System.getProperty("os", "mac");
 
     public static final User TEST_USER = new User("testg@mail.com", "Manuel1234$");
@@ -81,6 +81,7 @@ public class Init {
         brokenLinksImagesPage = new BrokenLinksImagesPage();
         linksPage = new LinksPage();
         uploadAndDownloadPage = new UploadAndDownloadPage();
+        textBoxPage = new TextBoxPage();
     }
 
     public void stop() {

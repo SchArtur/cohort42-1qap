@@ -49,5 +49,7 @@ public class LeftPanel extends BasePage {
 
     @FindBy(xpath = "//*[text()='Upload and Download']")
     public WebElement uploadAndDownloadButton;
+    @FindBy(xpath = "//*[text()='Text Box']")
+    public WebElement textBoxButton;
 }
 

@@ -1,5 +1,6 @@
 package tests.elements;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,12 @@ public class UploadAndDownloadPageTests extends BaseTest {
 
     @Test
     void test1() {
-        uploadAndDownloadPage.fillUploadFile();
+        Assertions.assertEquals("C:\\fakepath\\java_error_in_idea_7101.log",uploadAndDownloadPage.fillUploadFileMouseEvents());
+    }
+
+    @Test
+    void test2() {
+        Assertions.assertEquals("C:\\fakepath\\java_error_in_idea_7101.log",uploadAndDownloadPage.fillUploadFileKeyEvents());
     }
 
 }
