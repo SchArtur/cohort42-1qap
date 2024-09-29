@@ -20,7 +20,6 @@ public class ContextMenuPage extends BasePage {
     public WebElement hotSpot;
 
     public void rightClick() {
-        waitInSeconds(5);
         new Actions(driver).contextClick(hotSpot).perform();
     }
 }

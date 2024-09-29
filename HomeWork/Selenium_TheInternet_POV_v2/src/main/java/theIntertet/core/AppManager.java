@@ -36,6 +36,8 @@ public class AppManager {
     public static DragAndDropPage dragAndDrop;
 
     public static ContextMenuPage contextMenu;
+    public static JQueryUIPage jQueryUI;
+    public static HoversPage hoversPage;
 
 
 
@@ -75,6 +77,8 @@ public class AppManager {
         nestedFrames = new NestedFramesPage();
         dragAndDrop = new DragAndDropPage();
         contextMenu = new ContextMenuPage();
+        jQueryUI = new JQueryUIPage();
+        homePage = new HomePage();
 
 
     }

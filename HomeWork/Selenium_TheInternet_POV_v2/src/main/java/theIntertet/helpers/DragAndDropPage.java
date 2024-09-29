@@ -28,9 +28,7 @@ public class DragAndDropPage extends BasePage {
     }
 
     public DragAndDropPage actionMoveBy() {
-        waitInSeconds(5);
         new Actions(driver).clickAndHold(draggable).moveToElement(droppable).release().perform();
-        waitInSeconds(5);
         return this;
     }
 }
