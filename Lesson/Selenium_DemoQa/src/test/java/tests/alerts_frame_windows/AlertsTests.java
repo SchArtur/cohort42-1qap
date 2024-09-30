@@ -8,6 +8,8 @@ import tests.BaseTest;
 
 import static core.Init.*;
 
+@Tag("@ALL")
+@Tag("@ALERT")
 public class AlertsTests extends BaseTest {
 
     @BeforeAll

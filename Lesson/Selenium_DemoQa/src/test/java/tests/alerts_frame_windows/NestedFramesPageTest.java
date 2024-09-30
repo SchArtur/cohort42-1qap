@@ -1,14 +1,12 @@
 package tests.alerts_frame_windows;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import tests.BaseTest;
 
 import static core.Init.*;
 
+@Tag("@ALL")
 public class NestedFramesPageTest extends BaseTest {
 
     @BeforeAll

@@ -1,9 +1,6 @@
 package tests.alerts_frame_windows;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +9,8 @@ import tests.BaseTest;
 
 import static core.Init.*;
 
+@Tag("@ALL")
+@Tag("@FRAMES")
 public class FramesPageTest extends BaseTest {
 
     @BeforeAll

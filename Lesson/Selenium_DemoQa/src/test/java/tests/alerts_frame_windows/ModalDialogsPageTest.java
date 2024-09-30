@@ -1,14 +1,13 @@
 package tests.alerts_frame_windows;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.Alert;
 import tests.BaseTest;
 
 import static core.Init.*;
 
+@Tag("@ALL")
+@Tag("@MODAL")
 public class ModalDialogsPageTest extends BaseTest {
 
     @BeforeAll
@@ -23,6 +22,7 @@ public class ModalDialogsPageTest extends BaseTest {
         }
     }
 
+    @Tag("@MODAL")
     @Test
     void test1() {
         modalDialogsPage.showSmallModal.click();

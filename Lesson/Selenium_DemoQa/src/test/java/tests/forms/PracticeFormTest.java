@@ -1,15 +1,15 @@
 package tests.forms;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import tests.BaseTest;
 
 import java.io.File;
 
 import static core.Init.*;
 
+@Tag("@ALL")
+@Tag("@SMOKE")
+@Tag("@PRACTICE_FORM")
 public class PracticeFormTest extends BaseTest {
 
     @BeforeAll

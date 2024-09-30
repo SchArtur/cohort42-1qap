@@ -1,13 +1,12 @@
 package tests;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static core.Init.*;
 import static core.Init.driver;
 
+@Tag("@TEST_JS")
+@Tag("@ALL")
 public class TestJS extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {

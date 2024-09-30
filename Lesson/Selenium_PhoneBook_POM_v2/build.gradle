@@ -13,19 +13,10 @@ repositories {
 dependencies {
     implementation platform('org.junit:junit-bom:5.10.0')
     implementation 'org.junit.jupiter:junit-jupiter'
-// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-engine
     testImplementation 'org.junit.platform:junit-platform-engine:1.11.0'
-
-
-    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     implementation 'org.seleniumhq.selenium:selenium-java:4.24.0'
-
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5
     implementation 'io.qameta.allure:allure-junit5:2.29.0'
-
-    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     implementation 'ch.qos.logback:logback-classic:1.5.7'
-
 }
 
 test {
