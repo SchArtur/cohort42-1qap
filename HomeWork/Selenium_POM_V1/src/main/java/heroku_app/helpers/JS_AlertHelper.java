@@ -1,4 +1,4 @@
-package HerokuApp.helpers;
+package heroku_app.helpers;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

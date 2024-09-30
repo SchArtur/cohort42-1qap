@@ -1,6 +1,6 @@
 package tests;
 
-import HerokuApp.core.AppManager;
+import heroku_app.core.AppManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.slf4j.Logger;
