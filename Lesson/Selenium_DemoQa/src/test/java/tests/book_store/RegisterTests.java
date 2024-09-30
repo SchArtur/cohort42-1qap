@@ -6,6 +6,8 @@ import tests.BaseTest;
 import static core.Init.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.frameToBeAvailableAndSwitchToIt;
 
+@Tag("@ALL")
+@Tag("@REGISTER")
 public class RegisterTests extends BaseTest {
 
     @BeforeAll

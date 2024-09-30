@@ -1,18 +1,14 @@
 package tests.elements;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import pages.BasePage;
 import tests.BaseTest;
-
-import java.util.List;
 
 import static core.Init.*;
 
+@Tag("@ALL")
 public class LinksTests extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {

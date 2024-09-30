@@ -1,13 +1,13 @@
 package tests.interactions;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import tests.BaseTest;
 
 import static core.Init.*;
 
+@Tag("@ALL")
+@Tag("@SMOKE")
+@Tag("@DRAG_DROP")
 public class DroppableTests extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {

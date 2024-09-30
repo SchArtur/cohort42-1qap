@@ -1,14 +1,12 @@
 package tests.alerts_frame_windows;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import pages.alerts_frame_windows.BrowserWindowsPage;
+import org.junit.jupiter.api.*;
 import tests.BaseTest;
 
 import static core.Init.*;
 
+@Tag("@ALL")
+@Tag("@WINDOWS")
 public class WindowsTest extends BaseTest {
 
     @BeforeAll
