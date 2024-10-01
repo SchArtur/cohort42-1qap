@@ -19,5 +19,6 @@ public class HomePages extends BasePage {
     public WebElement contextMenuLink;
     @FindBy(css="[href='/dropdown']")
     public WebElement dropdownMenuLink;
-
+    @FindBy(css="[href='/drag_and_drop']")
+    public WebElement dragAndDropLink;
 }
