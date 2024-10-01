@@ -21,6 +21,7 @@ public class AppManager {
     public static HorizontalSliderPage horizontalSliderPages;
     public static JQueryUIMenuPage jQueryUIMenuPage;
     public static ContextMenuPage contextMenuPage;
+    public static DropdownPage dropdownPage;
     public static final String URL = "https://the-internet.herokuapp.com";
 
     public void init() {
@@ -45,6 +46,7 @@ public class AppManager {
         horizontalSliderPages = new HorizontalSliderPage();
         jQueryUIMenuPage = new JQueryUIMenuPage();
         contextMenuPage = new ContextMenuPage();
+        dropdownPage = new DropdownPage();
 
         driver.get(URL);
     }
