@@ -12,4 +12,6 @@ findProject(':HomeWork:Selenium_Demo_VOM_v2')?.name = 'Selenium_Demo_VOM_v2'
 include 'HomeWork:Selenium_TheInternet_POV_v2'
 findProject(':HomeWork:Selenium_TheInternet_POV_v2')?.name = 'Selenium_TheInternet_POV_v2'
 include 'HomeWork'
+include 'HomeWork:Selenium_Demo_Hase_v1'
+include 'HomeWork:Selenium_TheInternet_POV_v2'
 
