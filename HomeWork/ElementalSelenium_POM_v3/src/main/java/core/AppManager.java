@@ -22,6 +22,7 @@ public class AppManager {
     public static JQueryUIMenuPage jQueryUIMenuPage;
     public static ContextMenuPage contextMenuPage;
     public static DropdownPage dropdownPage;
+    public static DragAndDropPage dragAndDropPage;
     public static final String URL = "https://the-internet.herokuapp.com";
 
     public void init() {
@@ -47,6 +48,7 @@ public class AppManager {
         jQueryUIMenuPage = new JQueryUIMenuPage();
         contextMenuPage = new ContextMenuPage();
         dropdownPage = new DropdownPage();
+        dragAndDropPage = new DragAndDropPage();
 
         driver.get(URL);
     }
