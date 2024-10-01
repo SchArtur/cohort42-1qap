@@ -20,6 +20,7 @@ public class AppManager {
     public static MultipleWindowsPage multipleWindowsPages;
     public static HorizontalSliderPage horizontalSliderPages;
     public static JQueryUIMenuPage jQueryUIMenuPage;
+    public static ContextMenuPage contextMenuPage;
     public static final String URL = "https://the-internet.herokuapp.com";
 
     public void init() {
@@ -43,6 +44,7 @@ public class AppManager {
         multipleWindowsPages = new MultipleWindowsPage();
         horizontalSliderPages = new HorizontalSliderPage();
         jQueryUIMenuPage = new JQueryUIMenuPage();
+        contextMenuPage = new ContextMenuPage();
 
         driver.get(URL);
     }
