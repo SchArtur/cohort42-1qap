@@ -24,4 +24,5 @@ public class HoversTest extends BaseTest{
 
         assertFalse(userText.isEmpty(), "Подпись не отображается");
     }
+
 }
