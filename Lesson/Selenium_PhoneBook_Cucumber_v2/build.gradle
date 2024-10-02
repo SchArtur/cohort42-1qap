@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id("io.qameta.allure") version "2.12.0"
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('org.junit:junit-bom:5.10.0')
+    implementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.platform:junit-platform-engine:1.11.0'
+
+
+    implementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
+
+//    implementation 'ch.qos.logback:logback-classic:1.5.7'
+    implementation 'io.cucumber:cucumber-java:7.19.0'
+    implementation 'io.cucumber:cucumber-junit:7.19.0'
+    implementation 'io.qameta.allure:allure-cucumber7-jvm:2.29.0'
+}
+
+test {
+    useJUnitPlatform() {
+        if (project.hasProperty('tags')) {
+            includeTags("${tags}")
+        }
+
+        if (project.hasProperty('browser')) {
+            systemProperty('browser', "${browser}")
+        }
+    }
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+    finalizedBy('allureReport')
+}
+
+task smoke(type: Test) {
+    useJUnitPlatform() {
+            includeTags("@SMOKE")
+
+        if (project.hasProperty('browser')) {
+            systemProperty('browser', "${browser}")
+        }
+    }
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+    finalizedBy('allureReport')
+}
+
+

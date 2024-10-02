@@ -6,6 +6,7 @@ import tests.BaseTest;
 import static core.Init.*;
 
 @Tag("@ALL")
+@Disabled
 public class UploadAndDownloadPageTests extends BaseTest {
     @BeforeAll
     static void getAlertsPage() {

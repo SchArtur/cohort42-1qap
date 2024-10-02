@@ -1,4 +1,4 @@
-package phonebook.helpers;
+package phonebook.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
@@ -28,11 +28,6 @@ public class LoginPage extends BasePage {
     WebElement errorMsg;
 
 
-    @Step("Нажимаем на кнопку LOGIN на верхней панели")
-    public void clickOnLoginLink() {
-        clickOnElement(loginLink);
-    }
-
     @Step("Заполняем данные пользователя {0}")
     public void fillLoginForm(User user) {
         fillInputField(loginField, user.getEmail());
@@ -49,32 +44,15 @@ public class LoginPage extends BasePage {
         clickOnElement(registrationButton);
     }
 
-    @Step("Нажимаем на кнопку Sign Out")
-    public void clickOnSignOutButton() {
-        clickOnElement(signOutButton.get(0));
-    }
-
     @Step("Авторизуемся под тестовым пользователем")
     public void loginTestUser() {
-        clickOnLoginLink();
         fillLoginForm(TEST_USER);
         clickOnLoginButton();
-    }
-
-    @Step("Проверяем наличие кнопки 'Sign Out'")
-    public boolean isSignOutPresent() {
-        return elementIsDisplayed(signOutButton);
-    }
-
-    @Step("Проверяем наличие кнопки 'LOGIN'")
-    public boolean isLoginLinkPresent() {
-        return elementIsDisplayed(loginLink);
     }
 
     @Step("Получаем сообщение об ошибке")
     public String getErrorMessage() {
         return getElement(errorMsg).getText();
     }
-
 
 }
