@@ -7,5 +7,6 @@ include 'Lesson:Selenium_PhoneBook_POM_v2'
 include 'Lesson:FirstCucumberProject'
 include 'Lesson:Selenium_PhoneBook_Cucumber_v2'
 include 'HomeWork'
-
+include 'Lesson:Selenide_First_Project'
+findProject(':Lesson:Selenide_First_Project')?.name = 'Selenide_First_Project'
 

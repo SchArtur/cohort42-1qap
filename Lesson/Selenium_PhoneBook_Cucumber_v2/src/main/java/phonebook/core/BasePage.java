@@ -92,7 +92,7 @@ public class BasePage {
     }
 
     @Step("Ожидаем {0} секунд")
-    public void waitInSeconds(int seconds) {
+    public static void waitInSeconds(int seconds) {
         try {
             Thread.sleep(Duration.ofSeconds(seconds).toMillis());
         } catch (InterruptedException e) {

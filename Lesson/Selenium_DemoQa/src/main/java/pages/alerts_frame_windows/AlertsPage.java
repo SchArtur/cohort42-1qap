@@ -18,5 +18,4 @@ public class AlertsPage extends BasePage {
     public WebElement promtButton;
     @FindBy(id = "promptResult")
     public WebElement promptResult;
-
 }

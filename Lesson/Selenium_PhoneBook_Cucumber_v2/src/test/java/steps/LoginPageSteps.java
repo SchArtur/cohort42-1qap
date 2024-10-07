@@ -17,20 +17,19 @@ public class LoginPageSteps {
     public void clickOnLoginButton() {
         loginPage.clickOnLoginButton();
     }
-
-    @Тогда("заполняем данные пользователя")
+// через / можно указать второе слово в шаге для удобства
+    @Тогда("заполняем данные пользователя/контакта")
     public void fillLoginRegisterForm(Map<String, String> userFields) {
         User user = new User(userFields.get("Name"), userFields.get("Password"));
         loginPage.fillLoginForm(user);
     }
-
 
     @И("нажимаем на кнопку Registration на форме ввода")
     public void clickOnRegistrationButton() {
         loginPage.clickOnRegistrationButton();
     }
 
-    @И("авторизуемся под тестовым пользователем")
+    @И("авторизуемся под тестовым(и) пользователем")
     public void loginTestUser() {
         loginPage.loginTestUser();
     }
@@ -70,41 +69,4 @@ public class LoginPageSteps {
         return NEW_USER;
     }
 
-
-//    void test3() {
-//        loginPage.fillLoginForm(TEST_USER);
-//        loginPage.clickOnLoginButton();
-//        Assertions.assertTrue(loginPage.isSignOutPresent(), "Не отображается кнопка 'Sign Out'");
-//    }
-//
-//    @Test
-//    @DisplayName("Проверка авторизации c не валидными данными")
-//    void test4() {
-//        loginPage.fillLoginForm(NEW_USER);
-//        loginPage.clickOnLoginButton();
-//        Assertions.assertEquals("Wrong email or password", loginPage.getAlertText(), "Текст всплывающего уведомления не соответствует ожидаемому");
-//        Assertions.assertTrue(!loginPage.isSignOutPresent(), "Отображается кнопка 'Sign Out'");
-//        Assertions.assertEquals("Login Failed with code 401", loginPage.getErrorMessage(), "Текст ошибки не соответствует ожидаемому");
-//        Assertions.assertAll();
-//    }
-//
-//    @Test
-//    @Tag("@SMOKE")
-//    @DisplayName("Проверка успешной регистрации")
-//    void test5() {
-//        loginPage.fillLoginForm(NEW_USER);
-//        loginPage.clickOnRegistrationButton();
-//        Assertions.assertTrue(loginPage.isSignOutPresent(), "Не отображается кнопка 'Sign Out'");
-//    }
-//
-//    @ParameterizedTest
-//    @ArgumentsSource(UsersProvider.class)
-//    @DisplayName("Проверка регистрации с не валидными данными")
-//    void test6(User user) {
-//        loginPage.clickOnLoginLink();
-//        loginPage.fillLoginForm(user);
-//        loginPage.clickOnRegistrationButton();
-//        Assertions.assertTrue(loginPage.getAlertText().contains("Wrong email or password format"), "Текст всплывающего уведомления не содержит нужную строку");
-//        Assertions.assertTrue(!loginPage.isSignOutPresent(), "Отображается кнопка 'Sign Out'!");
-//    }
 }

@@ -5,11 +5,11 @@ import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.ru.Если;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import io.cucumber.java.ru.Тогда;
 import phonebook.core.AppManager;
 
 import static phonebook.core.AppManager.navigationPanel;
+import static phonebook.core.BasePage.waitInSeconds;
 
 public class BaseSteps {
 
@@ -41,4 +41,8 @@ public class BaseSteps {
         }
     }
 
+    @Тогда("ожидаем {int} секунд(ы)")
+    public void waitInSecondsStep(int seconds) {
+        waitInSeconds(seconds);
+    }
 }

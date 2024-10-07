@@ -1,6 +1,7 @@
 package phonebook.pages;
 
 import io.qameta.allure.Step;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import phonebook.core.BasePage;
@@ -21,15 +22,15 @@ public class ContactPage extends BasePage {
     WebElement removeButton;
 
     @FindBy(css = "[placeholder='Name']")
-    WebElement nameField;
+    public WebElement nameField;
     @FindBy(css = "[placeholder='Last Name']")
-    WebElement lastNameField;
+    public  WebElement lastNameField;
     @FindBy(css = "[placeholder='Phone']")
-    WebElement phoneField;
+    public WebElement phoneField;
     @FindBy(css = "[placeholder='email']")
-    WebElement emailField;
+    public WebElement emailField;
     @FindBy(css = "[placeholder='Address']")
-    WebElement addressField;
+    public WebElement addressField;
 
     @Step("Нажимаем на кнопку 'Save'")
     public ContactPage clickOnSaveButton() {
@@ -53,10 +54,15 @@ public class ContactPage extends BasePage {
         return getContactByName(contact) != null;
     }
 
+    @Step("Проверяем наличие контакта {0}")
+    public boolean contactIsPresent(String contactName) {
+        return getContactByName(new Contact(contactName)) != null;
+    }
+
     @Step("Получаем контакт из списка контактов")
     public WebElement getContactByName(Contact contact) {
         for (WebElement webElement : contactsList) {
-            if (webElement.getText().equals(contact.getName())) {
+            if (webElement.getText().contains(contact.getName())) {
                 return webElement;
             }
         }

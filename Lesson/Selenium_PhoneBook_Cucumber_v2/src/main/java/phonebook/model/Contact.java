@@ -8,6 +8,10 @@ public class Contact {
     private String address;
     private String description;
 
+    public Contact(String name) {
+        this.name = name;
+    }
+
     public Contact(String name, String lastName, String phone, String email, String address, String description) {
         this.name = name;
         this.lastName = lastName;

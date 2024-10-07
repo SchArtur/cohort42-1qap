@@ -13,7 +13,7 @@
     * проверяем наличие кнопки 'SignOut'
 
   Сценарий: Проверка успешной авторизации
-    * заполняем данные пользователя
+    * заполняем данные контакта
       | Name     | testg@mail.com |
       | Password | Manuel1234$    |
     * нажимаем на кнопку 'login'
@@ -24,7 +24,9 @@
       | Name     | testg@mail.com |
       | Password | Manue4$        |
     * нажимаем на кнопку 'login'
-    * проверяем текст всплывающего уведомления - "Wrong email or password"
+    * ожидаем 2 секунды
+    * ожидаем 5 секунд
+    * проверяем наличие текста всплывающего уведомления - "Wrong email or password"
     * проверяем текст ошибки - "Login Failed with code 401"
 
   Сценарий: Проверка успешной регистрации
@@ -37,13 +39,13 @@
       | Name     | <Name>     |
       | Password | <Password> |
     * нажимаем на кнопку Registration на форме ввода
-    * проверяем текст всплывающего уведомления - "Wrong email or password format"
-    * проверяем наличие кнопки 'SignOut'
+    * проверяем наличие текста всплывающего уведомления - "Wrong email or password format"
+    * проверяем отсутствие кнопки 'SignOut'
     Примеры:
       | Name          | Password    |
       | manuelgm.com  | Manuel1234$ |
-      | manuel@.com  | Manuel1234$ |
+      | manuel@.com   | Manuel1234$ |
       | manuel@go.com | masdfa1$    |
-      | manuel@go.com | MASdfa1     |
-      | manuel@go.com | MASdfa$     |
+      | manuel@o.com  | MASdfa1     |
+      | manuel@go.com | Ma          |
     

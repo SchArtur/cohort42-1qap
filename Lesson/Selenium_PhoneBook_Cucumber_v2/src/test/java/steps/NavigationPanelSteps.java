@@ -27,7 +27,7 @@ public class NavigationPanelSteps {
         navigationPanel.clickOnLink(element);
     }
 
-    @ParameterType("LOGIN|ADD|HOME|CONTACTS|SIGN_OUT")
+    @ParameterType("LOGIN|ADD|HOME|CONTACTS|SIGN_OUT|ABOUT")
     public WebElement webElement(String elementName) {
         switch (elementName) {
             case "LOGIN" -> {
@@ -35,6 +35,9 @@ public class NavigationPanelSteps {
             }
             case "ADD" -> {
                 return navigationPanel.addLink;
+            }
+            case "ABOUT" -> {
+                return navigationPanel.aboutLink;
             }
             case "HOME" -> {
                 return navigationPanel.homeLink;

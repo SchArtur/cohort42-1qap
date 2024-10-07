@@ -3,7 +3,7 @@
 <suite name="all">
     <test name="all">
         <classes>
-            <class name="steps.AboutPageTests"/>
+            <class name="steps.AboutPageSteps"/>
             <class name="steps.ContactPageTests"/>
             <class name="steps.LoginPageSteps"/>
             <class name="steps.HomePageTests"/>
