@@ -23,6 +23,9 @@ public class AppManager {
     public static ContextMenuPage contextMenuPage;
     public static DropdownPage dropdownPage;
     public static DragAndDropPage dragAndDropPage;
+    public static ExitIntentPage exitIntentPage;
+    public static BrokenImagesPage brokenImagesPage;
+    public static FileUploaderPage fileUploaderPage;
     public static final String URL = "https://the-internet.herokuapp.com";
 
     public void init() {
@@ -49,6 +52,10 @@ public class AppManager {
         contextMenuPage = new ContextMenuPage();
         dropdownPage = new DropdownPage();
         dragAndDropPage = new DragAndDropPage();
+        exitIntentPage = new ExitIntentPage();
+        brokenImagesPage = new BrokenImagesPage();
+        fileUploaderPage = new FileUploaderPage();
+
 
         driver.get(URL);
     }

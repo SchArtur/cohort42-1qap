@@ -1,13 +1,11 @@
 package pages.elements;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 import java.awt.*;
-import java.awt.event.InputEvent;
 
 import static core.Init.O_S;
 import static java.awt.event.KeyEvent.*;

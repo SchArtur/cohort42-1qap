@@ -5,20 +5,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePages extends BasePage {
-    @FindBy(css="[href='/javascript_alerts']")
+    @FindBy(css = "[href='/javascript_alerts']")
     public WebElement jsAlertsLink;
-    @FindBy(css="[href='/windows']")
+    @FindBy(css = "[href='/windows']")
     public WebElement multipleWindowsLink;
-    @FindBy(css="[href='/nested_frames']")
+    @FindBy(css = "[href='/nested_frames']")
     public WebElement nestedFramesLink;
-    @FindBy(css="[href='/horizontal_slider']")
+    @FindBy(css = "[href='/horizontal_slider']")
     public WebElement horizontalSliderLink;
-    @FindBy(css="[href='/jqueryui/menu']")
+    @FindBy(css = "[href='/jqueryui/menu']")
     public WebElement jqueryuiMenuLink;
-    @FindBy(css="[href='/context_menu']")
+    @FindBy(css = "[href='/context_menu']")
     public WebElement contextMenuLink;
-    @FindBy(css="[href='/dropdown']")
+    @FindBy(css = "[href='/dropdown']")
     public WebElement dropdownMenuLink;
-    @FindBy(css="[href='/drag_and_drop']")
+    @FindBy(css = "[href='/drag_and_drop']")
     public WebElement dragAndDropLink;
+    @FindBy(css = "[href='/exit_intent']")
+    public WebElement exitIntentLink;
+    @FindBy(css = "[href='/broken_images']")
+    public WebElement brokenImagesLink;
+    @FindBy(css = "[href='/upload']")
+    public WebElement fileUploadLink;
 }
