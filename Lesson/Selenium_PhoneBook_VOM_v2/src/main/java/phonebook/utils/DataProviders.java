@@ -1,4 +1,4 @@
-package phonebook.core;
+package phonebook.utils;
 
 import org.testng.annotations.DataProvider;
 import phonebook.data.Contact;
@@ -8,7 +8,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
 
 public class DataProviders {
 

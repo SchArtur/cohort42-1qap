@@ -3,12 +3,12 @@
 <suite name="smoke">
     <test name="smoke">
         <classes>
-            <class name="tests.LoginPageTests">
+            <class name="steps.LoginPageSteps">
                 <methods>
                     <include name=".*Sm.*"/>
                 </methods>
             </class>
-            <class name="tests.HomePageTests"/>
+            <class name="steps.HomePageTests"/>
         </classes>
     </test>
 </suite>

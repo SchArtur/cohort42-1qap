@@ -50,5 +50,3 @@ def registerTask(String taskName, String path) {
 
 registerTask('all', 'src/test/resources/testng.xml')
 registerTask('smoke', 'src/test/resources/smoke.xml')
-
-
