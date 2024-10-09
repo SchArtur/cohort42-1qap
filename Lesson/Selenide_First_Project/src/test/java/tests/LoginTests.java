@@ -16,8 +16,7 @@ public class LoginTests {
                 .acceptCookies()
                 .clickLoginLink()
                 .fillTestDataEmailAndPassword()
-                .clickSubmitBtn();
-
-        homePage.loginStatus.shouldHave(text("Test Test"));
+                .clickSubmitBtn()
+                .checkStatusLoginText("Test Test");
     }
 }

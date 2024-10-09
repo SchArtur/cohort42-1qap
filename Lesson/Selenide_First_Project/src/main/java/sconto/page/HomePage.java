@@ -1,5 +1,6 @@
 package sconto.page;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.impl.SelenidePageFactory;
@@ -30,7 +31,7 @@ public class HomePage {
     SelenideElement loginLink;
 
     @FindBy(css = ".headerElement__status--login")
-    public SelenideElement loginStatus;
+    SelenideElement loginStatus;
 
     public HomePage openHomePage() {
         return  Selenide.open(baseUrl, HomePage.class);
@@ -48,6 +49,9 @@ public class HomePage {
         return Selenide.page(LoginPage.class);
     }
 
-
+    public HomePage checkStatusLoginText(String text) {
+        loginStatus.shouldHave(Condition.text(text));
+        return Selenide.page(this);
+    }
 
 }
